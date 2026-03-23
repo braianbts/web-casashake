@@ -7,22 +7,14 @@ export default function ShakeLandingPage() {
   );
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
-  const mapsLink = "https://maps.app.goo.gl/fHorpfLVkmpKLbdS7";
-
-const mapsEmbed =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.3773330194996!2d-58.79415834420979!3d-34.34892125844504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61ce480d0883%3A0x6d9e275d3cf88b34!2sCasa%20Shake!5e0!3m2!1ses!2sar!4v1774199930505!5m2!1ses!2sar";
+  const mapsEmbed =
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d643.3773330194996!2d-58.79415834420979!3d-34.34892125844504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb61ce480d0883%3A0x6d9e275d3cf88b34!2sCasa%20Shake!5e0!3m2!1ses!2sar!4v1774199930505!5m2!1ses!2sar";
 
   const whatsappBtn =
     "inline-flex items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 text-sm font-semibold text-white shadow-[0_14px_32px_rgba(37,211,102,0.28)] transition duration-300 hover:scale-[1.02] hover:bg-[#1ebe5a]";
 
   const secondaryBtnDark =
     "inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-white/8 px-7 py-4 text-sm font-medium text-white backdrop-blur-md transition duration-300 hover:bg-white/14";
-
-  const secondaryBtnLight =
-    "inline-flex items-center justify-center rounded-full border border-[#ddd6cb] bg-white px-6 py-3.5 text-sm font-semibold text-[#2b251d] transition duration-300 hover:bg-[#faf7f2]";
-
-  const serviceBtn =
-    "mt-6 inline-flex items-center justify-center rounded-full border border-[#ddd6cb] bg-white px-5 py-2.5 text-sm font-semibold text-[#2b251d] transition duration-300 hover:border-[#d6ad5c] hover:bg-[#fcf7ee]";
 
   const micropigmentacionCategories = [
     {
@@ -53,27 +45,27 @@ const mapsEmbed =
   ];
 
   const artServices = [
-  {
-    title: "Tatuajes",
-    description: "Diseños personalizados y estilos adaptados a cada idea.",
-    image: "/tatuajes.avif",
-  },
-  {
-    title: "Perforaciones",
-    description: "Trabajo preciso, cuidado y asesoramiento estético.",
-    image: "/perforaciones.png",
-  },
-  {
-    title: "Joyería dental",
-    description: "Detalles que aportan identidad y presencia.",
-    image: "/joyeriadental.png",
-  },
-  {
-    title: "Remoción",
-    description: "Servicios orientados a corrección y renovación estética.",
-    image: "/remocion.png",
-  },
-];
+    {
+      title: "Tatuajes",
+      description: "Diseños personalizados y estilos adaptados a cada idea.",
+      image: "/tatuajes.avif",
+    },
+    {
+      title: "Perforaciones",
+      description: "Trabajo preciso, cuidado y asesoramiento estético.",
+      image: "/perforaciones.png",
+    },
+    {
+      title: "Joyería dental",
+      description: "Detalles que aportan identidad y presencia.",
+      image: "/joyeriadental.png",
+    },
+    {
+      title: "Remoción de microtatuajes",
+      description: "Servicios orientados a corrección y renovación estética.",
+      image: "/remocion.png",
+    },
+  ];
 
   const dermatoxServices = [
     "Tratamientos para arrugas, acné, manchas, rejuvenecimiento y glow up",
@@ -89,38 +81,56 @@ const mapsEmbed =
     "Hidralips y BBlips",
     "Limpieza facial y peeling",
     "Dermaplaning y Dermapen",
-    "Máscara LED y ultrasonido",
-    "Otros tratamientos complementarios",
   ];
 
-  const testimonials = [
-    {
-      name: "Belleza, estética y arte",
-      text: "En Casa Shake trabajamos cada servicio con enfoque estético, precisión y personalización para realzar la belleza natural de cada persona.",
-    },
-    {
-      name: "Servicio estrella",
-      text: "La micropigmentación es nuestra especialidad principal. Diseñamos resultados armónicos, delicados y adaptados a cada rostro o necesidad.",
-    },
-    {
-      name: "Propuesta integral",
-      text: "Cosmetología, estética avanzada, tatuajes, perforaciones y detalles complementan una propuesta pensada de forma integral.",
-    },
-  ];
 
   const testimonialImages = [
-  { image: "/testimonio1.png", alt: "Testimonio 1 Casa Shake" },
-  { image: "/testimonio2.png", alt: "Testimonio 2 Casa Shake" },
-  { image: "/testimonio3.png", alt: "Testimonio 3 Casa Shake" },
-  { image: "/testimonio4.png", alt: "Testimonio 4 Casa Shake" },
-  { image: "/testimonio5.png", alt: "Testimonio 5 Casa Shake" },
-  { image: "/testimonio6.png", alt: "Testimonio 6 Casa Shake" },
-  { image: "/testimonio7.png", alt: "Testimonio 7 Casa Shake" },
-];
+    { image: "/testimonio1.png", alt: "Testimonio 1 Casa Shake" },
+    { image: "/testimonio2.png", alt: "Testimonio 2 Casa Shake" },
+    { image: "/testimonio3.png", alt: "Testimonio 3 Casa Shake" },
+    { image: "/testimonio4.png", alt: "Testimonio 4 Casa Shake" },
+    { image: "/testimonio5.png", alt: "Testimonio 5 Casa Shake" },
+    { image: "/testimonio6.png", alt: "Testimonio 6 Casa Shake" },
+    { image: "/testimonio7.png", alt: "Testimonio 7 Casa Shake" },
+  ];
 
   const [figureStyle, setFigureStyle] = useState({
     transform: "translate3d(0px, 0px, 0px)",
   });
+
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const prevTestimonial = () => {
+    setActiveTestimonial((prev) =>
+      prev === 0 ? testimonialImages.length - 1 : prev - 1,
+    );
+  };
+
+  const nextTestimonial = () => {
+    setActiveTestimonial((prev) =>
+      prev === testimonialImages.length - 1 ? 0 : prev + 1,
+    );
+  };
+
+  const getVisibleTestimonials = () => {
+    const prev =
+      activeTestimonial === 0
+        ? testimonialImages.length - 1
+        : activeTestimonial - 1;
+
+    const next =
+      activeTestimonial === testimonialImages.length - 1
+        ? 0
+        : activeTestimonial + 1;
+
+    return {
+      prev: testimonialImages[prev],
+      current: testimonialImages[activeTestimonial],
+      next: testimonialImages[next],
+    };
+  };
+
+  const visibleTestimonials = getVisibleTestimonials();
 
   const handleFigureMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -156,10 +166,12 @@ const mapsEmbed =
       <div className="pointer-events-none absolute inset-0 opacity-[0.05] [background-image:radial-gradient(#7a6752_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
 
       <div className="relative z-10">
+
         <main>
           {/* HERO */}
-          <section className="relative px-2 pb-2 pt-2 md:px-3 md:pb-3 md:pt-3">
-            <div className="relative isolate min-h-[96vh] overflow-hidden rounded-[2rem] border border-white/10 bg-[#0f0d0b] shadow-[0_30px_120px_rgba(0,0,0,0.28)]">
+
+          <section className="relative w-full">
+            <div className="relative isolate min-h-screen overflow-hidden bg-[#0f0d0b]">
               <video
                 autoPlay
                 muted
@@ -176,7 +188,7 @@ const mapsEmbed =
               <div className="pointer-events-none absolute inset-0 z-[4] opacity-[0.05] [background-image:radial-gradient(#ffffff_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
               <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[160px] bg-[linear-gradient(180deg,rgba(15,13,11,0)_0%,rgba(15,13,11,0.05)_28%,rgba(15,13,11,0.18)_55%,rgba(15,13,11,0.38)_78%,rgba(15,13,11,0.72)_100%)]" />
 
-              <div className="relative z-20 flex min-h-[96vh] flex-col">
+              <div className="relative z-20 flex min-h-screen flex-col">
                 <div className="mx-auto relative flex w-full max-w-[1380px] items-center px-6 py-6 lg:px-8">
                   <img
                     src="/logo-cs-blanco.png"
@@ -295,73 +307,88 @@ const mapsEmbed =
               </div>
             </div>
           </section>
+
           {/* PRODUCTO ESTRELLA */}
           <section
             id="producto-estrella"
-            className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8"
+            className="relative overflow-hidden py-24"
           >
-            <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-2xl">
-                <p
-                  className="text-sm uppercase tracking-[0.22em] text-[#8d7f71]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Producto estrella
+            {/* FONDO / PATTERN */}
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[#f6f2ec]" />
+
+              <div className="absolute inset-0 opacity-[0.08] [background-image:radial-gradient(#b79d84_0.8px,transparent_0.8px)] [background-size:20px_20px]" />
+
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_25%,rgba(214,173,92,0.14),transparent_28%),radial-gradient(circle_at_80%_75%,rgba(201,121,70,0.12),transparent_26%)]" />
+
+              <div className="absolute left-[8%] top-[12%] h-40 w-40 rounded-full bg-[#eadbcc] blur-3xl opacity-55" />
+              <div className="absolute right-[8%] bottom-[10%] h-44 w-44 rounded-full bg-[#e7d6c8] blur-3xl opacity-45" />
+            </div>
+
+            <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+                <div className="max-w-2xl">
+                  <p
+                    className="text-sm uppercase tracking-[0.22em] text-[#8d7f71]"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    Producto estrella
+                  </p>
+                  <h2
+                    className="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    Micropigmentación - PMU.
+                    <br />
+                    La protagonista de Casa Shake.
+                  </h2>
+                </div>
+
+                <p className="max-w-xl text-base leading-7 text-[#5e5348]">
+                  Organizamos la propuesta principal por áreas para que cada
+                  persona identifique rápido el servicio que está buscando.
                 </p>
-                <h2
-                  className="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Micropigmentación - PMU.
-                  <br />
-                  La protagonista de Casa Shake.
-                </h2>
               </div>
 
-              <p className="max-w-xl text-base leading-7 text-[#5e5348]">
-                Organizamos la propuesta principal por áreas para que cada
-                persona identifique rápido el servicio que está buscando.
-              </p>
-            </div>
+              <div className="mt-12 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
+                {micropigmentacionCategories.map((item, index) => (
+                  <div
+                    key={item.title}
+                    className="group overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9]/92 shadow-[0_20px_50px_rgba(32,26,21,0.05)] backdrop-blur-sm transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(32,26,21,0.08)]"
+                  >
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/16 via-transparent to-transparent" />
+                      <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-sm font-semibold text-[#2b251d]">
+                        {index + 1}
+                      </div>
+                    </div>
 
-            <div className="mt-12 grid gap-4 md:grid-cols-3 xl:grid-cols-5">
-              {micropigmentacionCategories.map((item, index) => (
-                <div
-                  key={item.title}
-                  className="group overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_20px_50px_rgba(32,26,21,0.05)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_70px_rgba(32,26,21,0.08)]"
-                >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/16 via-transparent to-transparent" />
-                    <div className="absolute left-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-sm font-semibold text-[#2b251d]">
-                      {index + 1}
+                    <div className="p-5">
+                      <p
+                        className="text-xs uppercase tracking-[0.18em] text-[#8d7f71]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        PMU
+                      </p>
+                      <h3 className="mt-2 text-2xl font-semibold text-[#201a15]">
+                        {item.title}
+                      </h3>
+                      <p className="mt-3 text-sm leading-6 text-[#5e5348]">
+                        {item.subtitle}
+                      </p>
                     </div>
                   </div>
-
-                  <div className="p-5">
-                    <p
-                      className="text-xs uppercase tracking-[0.18em] text-[#8d7f71]"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
-                    >
-                      PMU
-                    </p>
-                    <h3 className="mt-2 text-2xl font-semibold text-[#201a15]">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-6 text-[#5e5348]">
-                      {item.subtitle}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </section>
-          
-         {/* MISION / QUIENES SOMOS / VISION */}
+
+          {/* MISION / QUIENES SOMOS / VISION */}
           <section className="relative overflow-hidden bg-[#f6f2ec] py-24 text-[#201a15]">
             <div className="pointer-events-none absolute inset-0">
               <div className="absolute left-[10%] top-[12%] h-44 w-44 rounded-full bg-[#eadbcc] blur-3xl opacity-70" />
@@ -387,10 +414,10 @@ const mapsEmbed =
 
                   <div className="mt-4 rounded-[1.25rem] border border-[#ece3d7] bg-white/70 p-5 shadow-[0_10px_24px_rgba(32,26,21,0.03)]">
                     <p className="text-sm leading-7 text-[#5e5348]">
-                      Convertirnos en un centro de estética de referencia reconocido por
-                      la excelencia en resultados, la innovación en tratamientos y la
-                      formación profesional dentro del mundo de la estética y el arte
-                      corporal.
+                      Convertirnos en un centro de estética de referencia
+                      reconocido por la excelencia en resultados, la innovación
+                      en tratamientos y la formación profesional dentro del
+                      mundo de la estética y el arte corporal.
                     </p>
                   </div>
                 </div>
@@ -409,25 +436,22 @@ const mapsEmbed =
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
                   >
                     Ciencia, estética
-                    <br />
-                    y diseño corporal.
+                    <br />y diseño corporal.
                   </h2>
 
                   <div className="mt-6 h-px w-16 bg-[#d6c4b2]" />
 
                   <p className="mt-6 text-[1.02rem] leading-8 text-[#5e5348]">
-                    En Casa Shake no solo buscamos ofrecer servicios estéticos, sino crear
-                    experiencias transformadoras que integren la ciencia dermatológica con
-                    el arte del diseño corporal.
+                    En Casa Shake no solo buscamos ofrecer servicios estéticos,
+                    sino crear experiencias transformadoras que integren la
+                    ciencia dermatológica con el arte del diseño corporal.
                   </p>
 
                   <p className="mt-5 text-[1.02rem] leading-8 text-[#5e5348]">
-                    Nuestro compromiso va más allá de los resultados visuales: aspiramos a
-                    que cada paciente que nos visita descubra una versión más confiada y
-                    segura de sí misma.
+                    Nuestro compromiso va más allá de los resultados visuales:
+                    aspiramos a que cada paciente que nos visita descubra una
+                    versión más confiada y segura de sí misma.
                   </p>
-
-                  
                 </div>
 
                 {/* VISION */}
@@ -446,10 +470,10 @@ const mapsEmbed =
 
                   <div className="mt-4 rounded-[1.25rem] border border-[#ece3d7] bg-white/70 p-5 shadow-[0_10px_24px_rgba(32,26,21,0.03)]">
                     <p className="text-sm leading-7 text-[#5e5348]">
-                      Brindar tratamientos estéticos avanzados que integren salud,
-                      belleza y bienestar, utilizando técnicas modernas y protocolos
-                      personalizados para potenciar la confianza y la mejor versión de
-                      cada persona.
+                      Brindar tratamientos estéticos avanzados que integren
+                      salud, belleza y bienestar, utilizando técnicas modernas y
+                      protocolos personalizados para potenciar la confianza y la
+                      mejor versión de cada persona.
                     </p>
                   </div>
                 </div>
@@ -462,77 +486,104 @@ const mapsEmbed =
             id="servicios"
             className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8"
           >
-            <div className="grid gap-16 lg:grid-cols-2">
-              {/* SERVICIOS DE ARTE */}
+            <div className="flex items-end justify-between gap-6">
               <div>
-                <div className="mb-10 inline-flex rounded-full border border-[#d8cab9] bg-[#fffaf3] px-5 py-2 text-sm font-medium text-[#7d6d60]">
-                  Servicios de Arte
-                </div>
-
-                <div className="space-y-10">
-                  {artServices.map((service, index) => (
-                    <div
-                      key={service.title}
-                      className={`grid grid-cols-[180px_1fr] gap-6 ${
-                        index !== artServices.length - 1
-                          ? "border-b border-[#ece3d7] pb-10"
-                          : ""
-                      }`}
-                    >
-                      <div className="overflow-hidden rounded-[1.35rem]">
-                        <img
-                          src={service.image}
-                          alt={service.title}
-                          className="h-[180px] w-full object-cover"
-                        />
-                      </div>
-
-                      <div className="flex flex-col justify-center">
-                        <p
-                          className="text-xs uppercase tracking-[0.18em] text-[#8d7f71]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          Arte corporal
-                        </p>
-
-                        <h3 className="mt-2 text-[2.2rem] font-semibold leading-[0.98] tracking-tight text-[#201a15]">
-                          {service.title}
-                        </h3>
-
-                        <p className="mt-4 max-w-[440px] text-[1.02rem] leading-7 text-[#5e5348]">
-                          {service.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                <p
+                  className="text-sm uppercase tracking-[0.22em] text-[#8d7f71]"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Servicios
+                </p>
+                <h2
+                  className="mt-4 text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Arte, belleza
+                  <br />
+                  y tratamientos.
+                </h2>
               </div>
 
-              {/* SERVICIOS DE BELLEZA Y SALUD */}
-              <div>
-                <div className="mb-10 inline-flex rounded-full border border-[#d8cab9] bg-[#fffaf3] px-5 py-2 text-sm font-medium text-[#7d6d60]">
-                  Servicios de Belleza y Salud
-                </div>
+              <p className="hidden max-w-xl text-base leading-7 text-[#5e5348] md:block">
+                Una propuesta integral pensada para combinar expresión, detalle,
+                estética y cuidado profesional en un mismo espacio.
+              </p>
+            </div>
 
-                <div className="space-y-14">
-                  {/* DERMATO COSMETOLOGIA */}
-                  <div className="grid grid-cols-[180px_1fr] gap-6 border-b border-[#ece3d7] pb-12">
-                    <div className="overflow-hidden rounded-[1.35rem]">
+            {/* FILA SUPERIOR - SERVICIOS DE ARTE */}
+            <div className="mt-14">
+              <div className="mb-6 inline-flex rounded-full border border-[#d8cab9] bg-[#fffaf3] px-5 py-2 text-sm font-medium text-[#7d6d60]">
+                Servicios de Arte
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                {artServices.map((service) => (
+                  <article
+                    key={service.title}
+                    className="group overflow-hidden rounded-[1.7rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_16px_40px_rgba(32,26,21,0.04)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(32,26,21,0.08)]"
+                  >
+                    <div className="overflow-hidden">
                       <img
-                        src="/dermatocosmetica.png"
-                        alt="Dermatocosmetología"
-                        className="h-[180px] w-full object-cover"
+                        src={service.image}
+                        alt={service.title}
+                        className="h-[210px] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
                       />
                     </div>
 
-                    <div>
-                      <h3 className="text-[2.4rem] font-semibold leading-[0.94] tracking-tight text-[#201a15]">
-                        Dermato-
-                        <br />
-                        cosmetología
+                    <div className="p-5">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Arte corporal
+                      </p>
+
+                      <h3 className="mt-2 text-2xl font-semibold leading-[1] tracking-tight text-[#201a15]">
+                        {service.title}
                       </h3>
 
-                      <div className="mt-5 space-y-3">
+                      <p className="mt-3 text-sm leading-6 text-[#5e5348]">
+                        {service.description}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            {/* FILA INFERIOR */}
+            <div className="mt-16 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+              {/* BLOQUE GRANDE - DERMATO */}
+              <div>
+                <div className="mb-6 inline-flex rounded-full border border-[#d8cab9] bg-[#fffaf3] px-5 py-2 text-sm font-medium text-[#7d6d60]">
+                  Servicios de Belleza y Salud
+                </div>
+
+                <article className="overflow-hidden rounded-[2rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_18px_45px_rgba(32,26,21,0.05)]">
+                  <div className="grid md:grid-cols-[0.95fr_1.05fr]">
+                    <div className="overflow-hidden">
+                      <img
+                        src="/dermatocosmetica.png"
+                        alt="Dermatocosmetología"
+                        className="h-full min-h-[300px] w-full object-cover"
+                      />
+                    </div>
+
+                    <div className="p-7 md:p-8">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Dermatocosmetología
+                      </p>
+
+                      <h3 className="mt-3 text-4xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
+                        Cuidado facial
+                        <br />
+                        avanzado.
+                      </h3>
+
+                      <div className="mt-6 space-y-3">
                         {dermatoxServices.map((item, index) => (
                           <div key={item} className="flex gap-3">
                             <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#d6ad5c] text-xs font-semibold text-[#201a15]">
@@ -546,126 +597,236 @@ const mapsEmbed =
                       </div>
                     </div>
                   </div>
+                </article>
+              </div>
 
-                  {/* ESTETICA */}
-                  <div className="grid grid-cols-[180px_1fr] gap-6">
-                    <div className="overflow-hidden rounded-[1.35rem]">
-                      <img
-                        src="/estetica.png"
-                        alt="Estética"
-                        className="h-[180px] w-full object-cover"
-                      />
-                    </div>
+              {/* BLOQUE DERECHO - ESTETICA */}
+              <div>
+                <div className="mb-6 inline-flex rounded-full border border-[#d8cab9] bg-[#fffaf3] px-5 py-2 text-sm font-medium text-[#7d6d60]">
+                  Estética
+                </div>
 
-                    <div>
-                      <h3 className="text-[2.4rem] font-semibold leading-[0.94] tracking-tight text-[#201a15]">
-                        Estética
-                      </h3>
+                <div className="space-y-4">
+                  <article className="overflow-hidden rounded-[1.7rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.04)]">
+                    <div className="grid grid-cols-[120px_1fr] gap-4 p-4">
+                      <div className="overflow-hidden rounded-[1.1rem]">
+                        <img
+                          src="/estetica.png"
+                          alt="Estética"
+                          className="h-full min-h-[120px] w-full object-cover"
+                        />
+                      </div>
 
-                      <div className="mt-5 space-y-3">
-                        {esteticaServices.map((item, index) => (
-                          <div key={item} className="flex gap-3">
-                            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#c97946] text-xs font-semibold text-white">
-                              {index + 1}
-                            </span>
-                            <p className="text-[1rem] leading-7 text-[#5e5348]">
-                              {item}
-                            </p>
-                          </div>
-                        ))}
+                      <div className="flex flex-col justify-center">
+                        <p
+                          className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Estética
+                        </p>
+                        <h3 className="mt-2 text-3xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
+                          Detalles que
+                          <br />
+                          potencian.
+                        </h3>
                       </div>
                     </div>
+                  </article>
+
+                  <div className="space-y-3">
+                    {esteticaServices.map((item, index) => (
+                      <article
+                        key={item}
+                        className="rounded-[1.4rem] border border-[#e7dfd3] bg-[#fffdf9] p-4 shadow-[0_10px_28px_rgba(32,26,21,0.03)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(32,26,21,0.06)]"
+                      >
+                        <div className="flex gap-3">
+                          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#c97946] text-xs font-semibold text-white">
+                            {index + 1}
+                          </span>
+                          <p className="text-[1rem] leading-7 text-[#5e5348]">
+                            {item}
+                          </p>
+                        </div>
+                      </article>
+                    ))}
                   </div>
                 </div>
               </div>
             </div>
           </section>
 
-
-
-
-        {/* TESTIMONIOS */}
-        <section className="relative overflow-hidden bg-[#f6f2ec] py-20 text-[#201a15]">
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute left-[10%] top-[18%] h-32 w-32 rounded-full bg-[#eadbcc] blur-3xl opacity-45" />
-            <div className="absolute right-[10%] bottom-[18%] h-36 w-36 rounded-full bg-[#e7d6c8] blur-3xl opacity-40" />
-            <div className="absolute inset-0 opacity-[0.02] [background-image:radial-gradient(#8e7d6d_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
-          </div>
-
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="text-center">
-              <p
-                className="text-xs uppercase tracking-[0.24em] text-[#8d7f71]"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                Testimonios
-              </p>
-
-              <h2
-                className="mx-auto mt-4 max-w-2xl text-3xl font-semibold leading-[1.12] tracking-tight text-[#201a15] md:text-4xl"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                Lo que comparten
-                <br />
-                después de Casa Shake.
-              </h2>
+          {/* TESTIMONIOS */}
+          <section className="relative overflow-hidden bg-[#f6f2ec] py-24 text-[#201a15]">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute left-[10%] top-[18%] h-32 w-32 rounded-full bg-[#eadbcc] blur-3xl opacity-45" />
+              <div className="absolute right-[10%] bottom-[18%] h-36 w-36 rounded-full bg-[#e7d6c8] blur-3xl opacity-40" />
+              <div className="absolute inset-0 opacity-[0.02] [background-image:radial-gradient(#8e7d6d_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
             </div>
 
-            <div className="relative mt-12 overflow-hidden">
-              <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-20 bg-[linear-gradient(90deg,#f6f2ec_0%,rgba(246,242,236,0)_100%)]" />
-              <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-20 bg-[linear-gradient(270deg,#f6f2ec_0%,rgba(246,242,236,0)_100%)]" />
+            <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="text-center">
+                <p
+                  className="text-xs uppercase tracking-[0.24em] text-[#8d7f71]"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Testimonios
+                </p>
 
-              <div className="flex w-max animate-[testimonialMarquee_48s_linear_infinite] gap-4">
-                {[...testimonialImages, ...testimonialImages].map((testimonial, index) => (
-                  <article
-                    key={`${testimonial.image}-${index}`}
-                    className="shrink-0 rounded-[1.35rem] border border-[#e7dfd3] bg-white/90 p-2 shadow-[0_10px_24px_rgba(32,26,21,0.04)] backdrop-blur-sm"
-                  >
-                    <div className="flex h-[250px] w-[260px] items-center justify-center overflow-hidden rounded-[1rem] bg-[#f8f4ee]">
+                <h2
+                  className="mx-auto mt-4 max-w-2xl text-3xl font-semibold leading-[1.12] tracking-tight text-[#201a15] md:text-4xl"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Lo que comparten
+                  <br />
+                  después de Casa Shake.
+                </h2>
+              </div>
+
+              <div className="relative mt-16">
+                {/* Flecha izquierda */}
+                <button
+                  type="button"
+                  onClick={prevTestimonial}
+                  aria-label="Testimonio anterior"
+                  className="absolute left-0 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#ddd6cb] bg-white/90 text-[#2b251d] shadow-[0_10px_24px_rgba(32,26,21,0.08)] backdrop-blur-sm transition duration-300 hover:scale-[1.03] hover:bg-white lg:flex"
+                >
+                  ←
+                </button>
+
+                {/* Flecha derecha */}
+                <button
+                  type="button"
+                  onClick={nextTestimonial}
+                  aria-label="Siguiente testimonio"
+                  className="absolute right-0 top-1/2 z-20 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-[#ddd6cb] bg-white/90 text-[#2b251d] shadow-[0_10px_24px_rgba(32,26,21,0.08)] backdrop-blur-sm transition duration-300 hover:scale-[1.03] hover:bg-white lg:flex"
+                >
+                  →
+                </button>
+
+                {/* Mobile / tablet */}
+                <div className="mx-auto max-w-[320px] lg:hidden">
+                  <div className="rounded-[2rem] border border-[#e7dfd3] bg-white/90 p-3 shadow-[0_18px_40px_rgba(32,26,21,0.06)] backdrop-blur-sm transition duration-500">
+                    <div className="overflow-hidden rounded-[1.4rem] bg-[#f8f4ee]">
                       <img
-                        src={testimonial.image}
-                        alt={testimonial.alt}
-                        className="max-h-full max-w-full object-contain"
+                        src={visibleTestimonials.current.image}
+                        alt={visibleTestimonials.current.alt}
+                        className="w-full object-contain"
                       />
                     </div>
-                  </article>
-                ))}
+                  </div>
+                </div>
+
+                {/* Desktop */}
+                <div className="hidden items-center justify-center gap-6 lg:flex">
+                  {/* Lateral izquierda */}
+                  <div className="w-[230px] scale-[0.92] opacity-50 blur-[0.2px] transition duration-500">
+                    <div className="rounded-[1.7rem] border border-[#e7dfd3] bg-white/70 p-3 shadow-[0_10px_24px_rgba(32,26,21,0.04)]">
+                      <div className="overflow-hidden rounded-[1.2rem] bg-[#f8f4ee]">
+                        <img
+                          src={visibleTestimonials.prev.image}
+                          alt={visibleTestimonials.prev.alt}
+                          className="w-full object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card central */}
+                  <div className="w-[340px] transition duration-500">
+                    <div className="rounded-[2rem] border border-[#e7dfd3] bg-white/95 p-3 shadow-[0_22px_50px_rgba(32,26,21,0.08)] backdrop-blur-sm">
+                      <div className="overflow-hidden rounded-[1.45rem] bg-[#f8f4ee]">
+                        <img
+                          src={visibleTestimonials.current.image}
+                          alt={visibleTestimonials.current.alt}
+                          className="w-full object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Lateral derecha */}
+                  <div className="w-[230px] scale-[0.92] opacity-50 blur-[0.2px] transition duration-500">
+                    <div className="rounded-[1.7rem] border border-[#e7dfd3] bg-white/70 p-3 shadow-[0_10px_24px_rgba(32,26,21,0.04)]">
+                      <div className="overflow-hidden rounded-[1.2rem] bg-[#f8f4ee]">
+                        <img
+                          src={visibleTestimonials.next.image}
+                          alt={visibleTestimonials.next.alt}
+                          className="w-full object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Flechas mobile */}
+                <div className="mt-6 flex items-center justify-center gap-3 lg:hidden">
+                  <button
+                    type="button"
+                    onClick={prevTestimonial}
+                    aria-label="Testimonio anterior"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#ddd6cb] bg-white text-[#2b251d] shadow-[0_8px_20px_rgba(32,26,21,0.06)] transition duration-300 hover:bg-[#faf7f2]"
+                  >
+                    ←
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={nextTestimonial}
+                    aria-label="Siguiente testimonio"
+                    className="flex h-11 w-11 items-center justify-center rounded-full border border-[#ddd6cb] bg-white text-[#2b251d] shadow-[0_8px_20px_rgba(32,26,21,0.06)] transition duration-300 hover:bg-[#faf7f2]"
+                  >
+                    →
+                  </button>
+                </div>
+
+                {/* Dots */}
+                <div className="mt-8 flex justify-center gap-2">
+                  {testimonialImages.map((_, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      aria-label={`Ir al testimonio ${index + 1}`}
+                      onClick={() => setActiveTestimonial(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        index === activeTestimonial
+                          ? "w-6 bg-[#201a15]"
+                          : "w-2 bg-[#cfc2b5]"
+                      }`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
-
-
-
+          </section>
 
           {/* EXPERIENCIA */}
-          <section className="relative mx-auto max-w-7xl px-6 py-18 lg:px-8">
-            <div className="relative overflow-hidden rounded-[2.3rem] border border-[#d6cabd] bg-[#d8c8b7] shadow-[0_24px_80px_rgba(24,24,24,0.10)]">
+          <section className="relative w-full py-16 md:py-20">
+            <div className="relative min-h-[760px] overflow-hidden bg-[#d8c8b7] md:min-h-[720px]">
               <div className="absolute inset-0">
                 <img
                   src="/casashake.png"
                   alt="Cabina Casa Shake"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#140f0b]/34" />
+                <div className="absolute inset-0 bg-[#140f0b]/30" />
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_45%)]" />
               </div>
 
               <div
-                className="relative z-10 min-h-[640px] px-5 py-8 md:px-8 md:py-8 lg:px-10"
+                className="relative z-10 min-h-[760px] px-4 py-8 md:min-h-[720px] md:px-10 md:py-10 lg:px-14"
                 onMouseMove={handleFigureMove}
                 onMouseLeave={resetFigureMove}
               >
-                <div className="mx-auto max-w-[900px] text-center">
+                <div className="mx-auto max-w-[1200px] text-center">
                   <p
-                    className="text-xs font-medium uppercase tracking-[0.35em] text-white/85"
+                    className="text-[10px] font-medium uppercase tracking-[0.32em] text-white/82 md:text-xs md:tracking-[0.35em]"
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
                   >
                     Casa Shake Studio
                   </p>
 
                   <p
-                    className="mt-25 text-[clamp(4.8rem,10vw,8.2rem)] font-semibold uppercase leading-[0.88] tracking-tight text-white/28"
+                    className="mt-10 text-[clamp(3.8rem,16vw,10rem)] font-semibold uppercase leading-[0.88] tracking-tight text-white/20 md:mt-16 md:text-[clamp(5rem,12vw,10rem)] md:text-white/25"
                     style={{ fontFamily: "Cormorant Garamond, serif" }}
                   >
                     EXPERIENCIA
@@ -676,27 +837,29 @@ const mapsEmbed =
                   src="/esposa.png"
                   alt="Profesional Casa Shake"
                   style={figureStyle}
-                  className="absolute bottom-0 left-1/2 z-20 h-[610px] w-auto -translate-x-1/2 object-contain transition-transform duration-200 ease-out drop-shadow-[0_30px_60px_rgba(0,0,0,0.25)] md:h-[690px] lg:h-[720px]"
+                  className="absolute bottom-[190px] left-1/2 z-20 h-[630px] w-auto -translate-x-1/2 object-contain transition-transform duration-200 ease-out drop-shadow-[0_24px_40px_rgba(0,0,0,0.22)] md:bottom-0 md:h-[620px] lg:h-[850px]"
                 />
 
-                <div className="absolute bottom-5 left-1/2 z-30 w-[calc(100%-2.5rem)] max-w-[880px] -translate-x-1/2 rounded-[1.7rem] border border-white/15 bg-[#fff8ef]/12 p-4 backdrop-blur-md md:p-5">
-                  <div className="flex flex-col items-center justify-between gap-5 md:flex-row">
-                    <div className="max-w-[470px] text-center md:text-left">
+                <div className="absolute bottom-4 left-1/2 z-30 w-[calc(100%-1.5rem)] max-w-[1100px] -translate-x-1/2 rounded-[1.5rem] border border-white/15 bg-[#fff8ef]/12 p-4 backdrop-blur-md md:bottom-8 md:w-[calc(100%-3rem)] md:rounded-[1.9rem] md:p-6">
+                  <div className="flex flex-col items-center justify-between gap-5 md:flex-row md:gap-6">
+                    <div className="max-w-[560px] text-center md:text-left">
                       <p
-                        className="text-sm uppercase tracking-[0.16em] text-white/65"
+                        className="text-[11px] uppercase tracking-[0.15em] text-white/65 md:text-sm md:tracking-[0.16em]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Casa Shake Experience
                       </p>
+
                       <h3
-                        className="mt-2 text-2xl font-semibold leading-[1.02] text-white md:text-[2rem]"
+                        className="mt-2 text-[2rem] font-semibold leading-[1.02] text-white md:text-[2.6rem]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Una experiencia estética real,
                         <br />
                         profesional y memorable.
                       </h3>
-                      <p className="mt-3 text-sm leading-6 text-white/78">
+
+                      <p className="mt-3 text-sm leading-6 text-white/78 md:mt-4 md:text-base md:leading-7">
                         Belleza, técnica y atención personalizada en un entorno
                         pensado para que cada servicio se viva con confianza y
                         cuidado.
@@ -707,7 +870,7 @@ const mapsEmbed =
                       href={whatsappLink}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center justify-center rounded-full bg-[#d6ad5c] px-8 py-4 text-sm font-semibold text-[#1f1a14] shadow-[0_12px_32px_rgba(214,173,92,0.24)] transition duration-300 hover:scale-[1.02] hover:bg-[#dfba72]"
+                      className="inline-flex w-full items-center justify-center rounded-full bg-[#d6ad5c] px-7 py-4 text-sm font-semibold text-[#1f1a14] shadow-[0_12px_32px_rgba(214,173,92,0.24)] transition duration-300 hover:scale-[1.02] hover:bg-[#dfba72] md:w-auto md:px-8"
                     >
                       Consultar ahora
                     </a>
@@ -717,125 +880,124 @@ const mapsEmbed =
             </div>
           </section>
 
-
           {/* CONTACTO / UBICACION / REDES */}
-<section
-  id="contacto"
-  className="mx-auto max-w-7xl px-6 py-24 lg:px-8"
->
-  <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-    <div className="rounded-[2.25rem] border border-[#2a221b] bg-[#16120e] px-8 py-12 text-white shadow-[0_20px_60px_rgba(24,24,24,0.12)] md:px-14 md:py-16">
-      <p
-        className="text-sm uppercase tracking-[0.22em] text-[#d6ad5c]/80"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
-      >
-        Ubicación / contacto / redes
-      </p>
-      <h2
-        className="mt-5 text-4xl font-semibold leading-[0.98] tracking-tight md:text-6xl"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
-      >
-        Consultá,
-        <br />
-        reservá,
-        <br />
-        conectá.
-      </h2>
-      <p className="mt-6 max-w-2xl text-base leading-8 text-white/70">
-        Si querés recibir información sobre micropigmentación, tratamientos
-        faciales, estética avanzada, perforaciones, tatuajes o cualquiera de
-        nuestros servicios, escribinos por WhatsApp y te asesoramos de forma
-        personalizada.
-      </p>
+          <section
+            id="contacto"
+            className="mx-auto max-w-7xl px-6 py-24 lg:px-8"
+          >
+            <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="rounded-[2.25rem] border border-[#2a221b] bg-[#16120e] px-8 py-12 text-white shadow-[0_20px_60px_rgba(24,24,24,0.12)] md:px-14 md:py-16">
+                <p
+                  className="text-sm uppercase tracking-[0.22em] text-[#d6ad5c]/80"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Ubicación / contacto / redes
+                </p>
+                <h2
+                  className="mt-5 text-4xl font-semibold leading-[0.98] tracking-tight md:text-6xl"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Consultá,
+                  <br />
+                  reservá,
+                  <br />
+                  conectá.
+                </h2>
+                <p className="mt-6 max-w-2xl text-base leading-8 text-white/70">
+                  Si querés recibir información sobre micropigmentación,
+                  tratamientos faciales, estética avanzada, perforaciones,
+                  tatuajes o cualquiera de nuestros servicios, escribinos por
+                  WhatsApp y te asesoramos de forma personalizada.
+                </p>
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-        <a
-          href={whatsappLink}
-          target="_blank"
-          rel="noreferrer"
-          className={whatsappBtn}
-        >
-          WhatsApp
-        </a>
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={whatsappBtn}
+                  >
+                    WhatsApp
+                  </a>
 
-        <a href="#producto-estrella" className={secondaryBtnDark}>
-          Ver servicios
-        </a>
-      </div>
-    </div>
+                  <a href="#producto-estrella" className={secondaryBtnDark}>
+                    Ver servicios
+                  </a>
+                </div>
+              </div>
 
-    <div className="rounded-[2.25rem] border border-[#e1d7ca] bg-[#fffdf9] p-8 shadow-[0_20px_60px_rgba(32,26,21,0.05)]">
-  <p
-    className="text-sm uppercase tracking-[0.18em] text-[#8d7f71]"
-    style={{ fontFamily: "Cormorant Garamond, serif" }}
-  >
-    Casa Shake
-  </p>
+              <div className="rounded-[2.25rem] border border-[#e1d7ca] bg-[#fffdf9] p-8 shadow-[0_20px_60px_rgba(32,26,21,0.05)]">
+                <p
+                  className="text-sm uppercase tracking-[0.18em] text-[#8d7f71]"
+                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+                >
+                  Casa Shake
+                </p>
 
-  <div className="mt-6 space-y-5">
-    <div>
-      <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
-        WhatsApp
-      </p>
-      <p className="mt-2 text-base text-[#2b251d]">
-        +54 9 11 7616-6532
-      </p>
-    </div>
+                <div className="mt-6 space-y-5">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
+                      WhatsApp
+                    </p>
+                    <p className="mt-2 text-base text-[#2b251d]">
+                      +54 9 11 7616-6532
+                    </p>
+                  </div>
 
-    <div>
-      <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
-        Instagram
-      </p>
-      <p className="mt-2 text-base text-[#2b251d]">@casa_shake_</p>
-    </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
+                      Instagram
+                    </p>
+                    <p className="mt-2 text-base text-[#2b251d]">
+                      @casa_shake_
+                    </p>
+                  </div>
 
-    <div>
-      <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
-        Atención
-      </p>
-      <p className="mt-2 text-base text-[#2b251d]">
-        Turnos y asesoramiento personalizado
-      </p>
-    </div>
-  </div>
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
+                      Atención
+                    </p>
+                    <p className="mt-2 text-base text-[#2b251d]">
+                      Turnos y asesoramiento personalizado
+                    </p>
+                  </div>
+                </div>
 
-  <div className="mt-8 h-px w-full bg-[#ece3d7]" />
+                <div className="mt-8 h-px w-full bg-[#ece3d7]" />
 
-  <div className="mt-8">
-    <div className="flex items-center justify-between gap-4">
-      <div>
-        <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
-          Ubicación
-        </p>
-        <p className="mt-2 text-sm leading-6 text-[#5e5348]">
-          Edilfredo Ameghino 785, Belén de Escobar, Buenos Aires.
-        </p>
-      </div>
-    </div>
+                <div className="mt-8">
+                  <div className="flex items-center justify-between gap-4">
+                    <div>
+                      <p className="text-xs uppercase tracking-[0.16em] text-[#8d7f71]">
+                        Ubicación
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-[#5e5348]">
+                        Edilfredo Ameghino 785, Belén de Escobar, Buenos Aires.
+                      </p>
+                    </div>
+                  </div>
 
-    <div className="mt-5 overflow-hidden rounded-[1.4rem] border border-[#e7dfd3] bg-[#f8f4ee]">
-      <iframe
-        src={mapsEmbed}
-        width="100%"
-        height="260"
-        style={{ border: 0 }}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Mapa Casa Shake"
-        className="block w-full"
-      />
-    </div>
-  </div>
+                  <div className="mt-5 overflow-hidden rounded-[1.4rem] border border-[#e7dfd3] bg-[#f8f4ee]">
+                    <iframe
+                      src={mapsEmbed}
+                      width="100%"
+                      height="260"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Mapa Casa Shake"
+                      className="block w-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-
-
-</div>
-
-
-  </div>
-</section>
+          
         </main>
+
       </div>
     </div>
   );
