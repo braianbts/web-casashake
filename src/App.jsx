@@ -271,7 +271,7 @@ function ServiciosSection({ artServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-1 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[80%] overflow-hidden md:h-[75%]">
+                      <div className="relative h-[80%] overflow-hidden md:h-[110%]">
                         <video
                           autoPlay
                           muted
@@ -282,38 +282,27 @@ function ServiciosSection({ artServices }) {
                           <source src="/salud.mov" type="video/mp4" />
                         </video>
 
-                        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
                       </div>
 
                       <div className="relative z-10 -mt-6 flex h-[28%] flex-col justify-start p-5 xl:-mt-28 xl:p-6">
                         <div>
-                          <p
-                            className="text-[10px] uppercase tracking-[0.18em] text-[#938476]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Belleza y salud
-                          </p>
+                          
 
                           <h3
                             className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
                             style={{ fontFamily: "Cormorant Garamond, serif" }}
                           >
-                            Cuidado
-                            <br />
-                            de la piel.
+                            Salud
+                            
                           </h3>
 
                           <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Tratamientos orientados a mejorar la calidad de la
-                            piel.
-                          </p>
-                        </div>
-
-                        <div className="mt-3 rounded-[1rem] border border-[#eee4db] bg-[linear-gradient(180deg,rgba(255,255,255,0.72)_0%,rgba(249,244,239,0.82)_100%)] px-3 py-3 backdrop-blur-md">
-                          <p className="text-xs leading-5 text-[#5f564d]">
                             Acné, manchas, rosácea, rejuvenecimiento.
                           </p>
                         </div>
+
+                        
                       </div>
                     </div>
                   </motion.article>
@@ -326,7 +315,7 @@ function ServiciosSection({ artServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-2 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[70%] overflow-hidden md:h-[40%]">
+                      <div className="relative h-[70%] overflow-hidden md:h-[65%]">
                         <img
                           src="/meso.JPEG"
                           alt="Mesoterapia"
@@ -337,33 +326,22 @@ function ServiciosSection({ artServices }) {
 
                       <div className="flex h-[10%] flex-col justify-between p-5 md:p-5 xl:p-5">
                         <div>
-                          <p
-                            className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Mesoterapia
-                          </p>
+                         
 
                           <h3
                             className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
                             style={{ fontFamily: "Cormorant Garamond, serif" }}
                           >
-                            Definición
-                            <br />y volumen.
+                           Mesoterapia
                           </h3>
 
                           <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Tratamientos orientados a modelar, aportar volumen y
-                            realzar rasgos.
+                            Lipopapada, Aumento de glúteos, Rinomodelación,
+                            Volumen de labios, Babyface
                           </p>
                         </div>
 
-                        <div className="mt-3 rounded-[1rem] border border-[#eee4db] bg-[linear-gradient(180deg,rgba(255,255,255,0.72)_0%,rgba(249,244,239,0.82)_100%)] px-3 py-3 backdrop-blur-md">
-                          <p className="text-xs leading-5 text-[#5f564d]">
-                            Lipopapada, Aumento de glúteos, Rinomodelación,
-                            Volumen de labios, Babyface.
-                          </p>
-                        </div>
+                        
                       </div>
                     </div>
                   </motion.article>
@@ -376,7 +354,7 @@ function ServiciosSection({ artServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-3 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[75%] overflow-hidden md:h-[40%]">
+                      <div className="relative h-[75%] overflow-hidden md:h-[65%]">
                         <video
                           autoPlay
                           muted
@@ -391,34 +369,20 @@ function ServiciosSection({ artServices }) {
 
                       <div className="flex h-[10%] flex-col justify-between p-4 md:p-5 xl:p-5">
                         <div>
-                          <p
-                            className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Cosmeto
-                          </p>
+                          
 
                           <h3
                             className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
                             style={{ fontFamily: "Cormorant Garamond, serif" }}
                           >
-                            Cuidado
-                            <br />
-                            profundo.
+                            Cosmetología
                           </h3>
 
                           <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Tratamientos enfocados en renovar, limpiar y mejorar
-                            la textura de la piel con un enfoque delicado y
-                            profesional.
-                          </p>
-                        </div>
-
-                        <div className="mt-3 rounded-[1rem] border border-[#eee4db] bg-[linear-gradient(180deg,rgba(255,255,255,0.72)_0%,rgba(249,244,239,0.82)_100%)] px-3 py-3 backdrop-blur-md">
-                          <p className="text-xs leading-5 text-[#5f564d]">
                             Peeling, Limpieza facial, Dermaplaning, Dermapen.
                           </p>
                         </div>
+
                       </div>
                     </div>
                   </motion.article>
@@ -431,45 +395,32 @@ function ServiciosSection({ artServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-4 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[75%] overflow-hidden md:h-[60%]">
+                      <div className="relative h-[75%] overflow-hidden md:h-[88%]">
                         <img
                           src="/estetica.JPG"
                           alt="Estética"
-                          className="h-full w-full scale-130 object-cover object-[center_120%]"
+                          className="h-full w-full scale-100 object-cover object-[center_250%]"
                         />
-                        <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
                       </div>
 
                       <div className="relative z-10 -mt-12 flex h-[20%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
                         <div>
-                          <p
-                            className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Estética
-                          </p>
+                          
 
                           <h3
                             className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
                             style={{ fontFamily: "Cormorant Garamond, serif" }}
                           >
-                            Detalles
-                            <br />
-                            que realzan.
+                            Estética
                           </h3>
 
                           <p className="mt-3 text-sm leading-6 text-[#5e5f4d]">
-                            Tratamientos pensados para definir, hidratar y
-                            potenciar rasgos con resultados delicados y
-                            actuales.
-                          </p>
-                        </div>
-
-                        <div className="mt-3 rounded-[1rem] border border-[#eee4db] bg-[linear-gradient(180deg,rgba(255,255,255,0.72)_0%,rgba(249,244,239,0.82)_100%)] px-3 py-3 backdrop-blur-md">
-                          <p className="text-xs leading-5 text-[#5f564d]">
                             Laminado y perfilado de cejas, Hydralips y BBlips.
                           </p>
                         </div>
+
+                     
                       </div>
                     </div>
                   </motion.article>
@@ -540,7 +491,7 @@ export default function ShakeLandingPage() {
     {
       title: "Labios",
       subtitle: "Efecto full lips, Aqualips, Solo Contorno, Neutralización",
-      image: "/Micropigmentaciondelabios.jpg",
+      image: "/LABIOS1.JPG",
     },
     {
       title: "Cejas",
@@ -606,7 +557,7 @@ export default function ShakeLandingPage() {
   const testimonialImages = [
     { image: "/testimonio1.png", alt: "Testimonio 1 Casa Shake" },
     { image: "/testimonio2.png", alt: "Testimonio 2 Casa Shake" },
-    { image: "/testimonio3.png", alt: "Testimonio 3 Casa Shake" },
+    { image: "/TESTRECORD.jpg", alt: "Testimonio 3 Casa Shake" },
     { image: "/testimonio4.png", alt: "Testimonio 4 Casa Shake" },
     { image: "/testimonio5.png", alt: "Testimonio 5 Casa Shake" },
     { image: "/testimonio6.png", alt: "Testimonio 6 Casa Shake" },
@@ -1165,9 +1116,9 @@ export default function ShakeLandingPage() {
 
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl">
                     <img
-                      src="/mision.png"
+                      src="/mision1.jpg"
                       alt="Misión Casa Shake"
-                      className="h-[240px] w-full object-cover"
+                      className="h-[400px] w-full object-cover"
                     />
                   </div>
 
@@ -1224,9 +1175,9 @@ export default function ShakeLandingPage() {
 
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl">
                     <img
-                      src="/beauty-detail.jpg"
+                      src="/vision1.JPG"
                       alt="Visión Casa Shake"
-                      className="h-[240px] w-full object-cover"
+                      className="h-[400px] w-full object-cover"
                     />
                   </div>
 
