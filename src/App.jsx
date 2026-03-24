@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
@@ -31,11 +31,14 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
 
   const currentScene = scenes[activeScene];
 
+  const serviciosSectionRef = useRef(null);
+
   return (
     <section
-      id="servicios"
-      className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:h-[100svh] xl:overflow-hidden xl:px-20 xl:py-6"
-    >
+  ref={serviciosSectionRef}
+  id="servicios"
+  className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:h-[100svh] xl:overflow-hidden xl:px-20 xl:py-6"
+>
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbf9f6_0%,#f7f4ef_45%,#f6f1eb_100%)]" />
         <div className="absolute left-[6%] top-[12%] h-44 w-44 rounded-full bg-[#eadcf5] blur-3xl opacity-55" />
@@ -103,7 +106,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.9rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[65%] overflow-hidden">
+                      <div className="relative h-[150%] overflow-hidden">
                         <img
                           src="/remocion.png"
                           alt="Remoción de microtatuajes"
@@ -112,7 +115,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                         <div className="absolute inset-x-0 bottom-0 h-[18%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.86)] to-transparent" />
                       </div>
 
-                      <div className="flex h-[35%] flex-col justify-end p-5 xl:p-6">
+                      <div className="flex h-[35%] mb-4 flex-col justify-end p-5 xl:p-6">
                         <p
                           className="text-[11px] uppercase tracking-[0.2em] text-[#938476]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -180,7 +183,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:row-span-2 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[72%] overflow-hidden">
+                      <div className="relative h-[80%] overflow-hidden">
                         <video
                           autoPlay
                           muted
@@ -191,10 +194,10 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                           <source src="/joyeria1.mov" type="video/mp4" />
                         </video>
 
-                        <div className="absolute inset-x-0 bottom-0 h-[12%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 h-[5%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
                       </div>
 
-                      <div className="flex h-[28%] flex-col justify-end p-5 xl:p-6">
+                      <div className="flex mb-[-100px] h-[18%] flex-col justify-end p-5 xl:p-6">
                         <p
                           className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
@@ -203,7 +206,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                         </p>
 
                         <h4
-                          className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
+                          className="mt-1 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           {thirdArt?.title || "Joyería dental"}
@@ -225,7 +228,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full min-h-0 flex-col">
-                      <div className="relative h-[56%] overflow-hidden xl:h-[65%]">
+                      <div className="relative h-[80%] overflow-hidden xl:h-[65%]">
                         <img
                           src={secondArt?.image || "/perforaciones.png"}
                           alt={secondArt?.title || "Servicio secundario"}
@@ -268,7 +271,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-1 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[72%] overflow-hidden">
+                      <div className="relative h-[80%] overflow-hidden md:h-[75%]">
                         <video
                           autoPlay
                           muted
@@ -323,16 +326,16 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-2 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[46%] overflow-hidden">
+                      <div className="relative h-[70%] overflow-hidden md:h-[40%]">
                         <img
                           src="/meso.JPEG"
                           alt="Mesoterapia"
                           className="h-full w-full scale-110 object-cover object-[center_18%]"
                         />
-                        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,0.95)] to-transparent" />
+                        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
                       </div>
 
-                      <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                      <div className="flex h-[10%] flex-col justify-between p-5 md:p-5 xl:p-5">
                         <div>
                           <p
                             className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
@@ -373,7 +376,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-3 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[46%] overflow-hidden">
+                      <div className="relative h-[75%] overflow-hidden md:h-[40%]">
                         <video
                           autoPlay
                           muted
@@ -386,7 +389,7 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                         <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
                       </div>
 
-                      <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                      <div className="flex h-[10%] flex-col justify-between p-4 md:p-5 xl:p-5">
                         <div>
                           <p
                             className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
@@ -428,16 +431,16 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
                     className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-4 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
                   >
                     <div className="flex h-full flex-col">
-                      <div className="relative h-[58%] overflow-hidden">
+                      <div className="relative h-[75%] overflow-hidden md:h-[60%]">
                         <img
                           src="/estetica.JPG"
                           alt="Estética"
-                          className="h-full w-full scale-130 object-cover object-[center_140%]"
+                          className="h-full w-full scale-130 object-cover object-[center_120%]"
                         />
                         <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
                       </div>
 
-                      <div className="relative z-10 -mt-12 flex h-[42%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
+                      <div className="relative z-10 -mt-12 flex h-[20%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
                         <div>
                           <p
                             className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
@@ -476,30 +479,41 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
           </AnimatePresence>
 
           <div className="mt-6 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
-            <div className="flex w-full justify-center">
-              <div className="flex items-center gap-2 rounded-full border border-[#ece3d9]/90 bg-white/60 px-2 py-2 backdrop-blur-xl xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
-                {[0, 1].map((scene) => {
-                  const isActive = activeScene === scene;
+  <div className="flex w-full justify-center">
+    <div className="flex items-center gap-2 rounded-full border border-[#ece3d9]/90 bg-white/60 px-2 py-2 backdrop-blur-xl xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
+      {[0, 1].map((scene) => {
+        const isActive = activeScene === scene;
 
-                  return (
-                    <button
-                      key={scene}
-                      type="button"
-                      onClick={() => setActiveScene(scene)}
-                      aria-label={`Ir a escena ${scene + 1}`}
-                      className={`flex h-10 w-10 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
-                        isActive
-                          ? "border-[#c8a8bb] bg-[linear-gradient(180deg,#cdb1c0_0%,#b995aa_100%)] text-white shadow-[0_10px_24px_rgba(185,149,170,0.28)]"
-                          : "border-[#ece3d9] bg-white/70 text-[#8f8173] hover:bg-white"
-                      }`}
-                    >
-                      {scene + 1}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
+        return (
+          <button
+            key={scene}
+            type="button"
+            onClick={() => {
+              setActiveScene(scene);
+
+              if (window.innerWidth < 1280) {
+                requestAnimationFrame(() => {
+                  serviciosSectionRef.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                  });
+                });
+              }
+            }}
+            aria-label={`Ir a escena ${scene + 1}`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
+              isActive
+                ? "border-[#c8a8bb] bg-[linear-gradient(180deg,#cdb1c0_0%,#b995aa_100%)] text-white shadow-[0_10px_24px_rgba(185,149,170,0.28)]"
+                : "border-[#ece3d9] bg-white/70 text-[#8f8173] hover:bg-white"
+            }`}
+          >
+            {scene + 1}
+          </button>
+        );
+      })}
+    </div>
+  </div>
+</div>
         </div>
       </div>
     </section>
@@ -752,9 +766,9 @@ export default function ShakeLandingPage() {
                 <div className="relative z-30 w-full border-b border-white/10">
                     <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,235,199,0.20)_0%,rgba(245,223,170,0.70)_48%,rgba(243,214,145,0.0)_100%)] backdrop-blur-xl" />
                     <div className="relative mx-auto flex w-full max-w-[1380px] items-center justify-center px-6 py-1 lg:px-6">
-                      <p className="text-center text-[11px] uppercase tracking-[0.18em] text-white/82 md:text-[10px]">
-  · Edilfredo Ameghino 785, Belén de Escobar, Zona Norte ·
-</p>
+                      <p className="text-center text-[8px] uppercase tracking-[0.18em] text-white/82 md:text-[10px]">
+                        · Edilfredo Ameghino 785, Belén de Escobar, Zona Norte ·
+                      </p>
                     </div>
                   </div>
                 <div className="mx-auto relative flex w-full max-w-[1380px] items-center px-6 py-6 lg:px-8">
@@ -798,12 +812,12 @@ export default function ShakeLandingPage() {
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           Te ayudamos a{" "}
-                          <span className="text-[#fbff00] italic">
+                          <span className="text-[#f0d660] italic">
                             potenciar
                           </span>
                           <br />
                           y{" "}
-                          <span className="text-[#fbff00] italic">
+                          <span className="text-[#f0d660] italic">
                             cuidar
                           </span>{" "}
                           tu belleza.
@@ -960,190 +974,179 @@ export default function ShakeLandingPage() {
                 className="mt-12"
               >
                 <div className="grid gap-5 xl:grid-cols-[0.9fr_1.25fr_0.9fr] xl:items-center">
-                  <div className="hidden xl:flex xl:flex-col xl:gap-5">
-                    {micropigmentacionCategories
-                      .slice(1, 3)
-                      .map((item, localIndex) => {
-                        const index = localIndex + 1;
+  <div className="hidden xl:flex xl:flex-col xl:gap-5">
+    {micropigmentacionCategories.slice(1, 3).map((item, localIndex) => {
+      const index = localIndex + 1;
 
-                        return (
-                          <motion.article
-                            key={item.title}
-                            whileHover={{ y: -4 }}
-                            transition={{ duration: 0.3 }}
-                            className="group relative overflow-hidden rounded-[1.5rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
-                          >
-                            <div className="grid min-h-[230px] grid-cols-[0.95fr_1.05fr]">
-                              <div className="relative overflow-hidden">
-                                <img
-                                  src={item.image}
-                                  alt={item.title}
-                                  className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
-                                />
-                              </div>
+      return (
+        <motion.article
+          key={item.title}
+          whileHover={{ y: -4 }}
+          transition={{ duration: 0.3 }}
+          className="group relative overflow-hidden rounded-[1.5rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
+        >
+          <div className="grid min-h-[230px] grid-cols-[0.95fr_1.05fr]">
+            <div className="relative overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
 
-                              <div className="flex flex-col justify-center px-5 py-5">
-                                <p
-                                  className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
-                                  style={{
-                                    fontFamily: "Cormorant Garamond, serif",
-                                  }}
-                                >
-                                  PMU · {String(index + 1).padStart(2, "0")}
-                                </p>
+            <div className="flex flex-col justify-center px-5 py-5">
+              <p
+                className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                PMU · {String(index + 1).padStart(2, "0")}
+              </p>
 
-                                <h3
-                                  className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
-                                  style={{
-                                    fontFamily: "Cormorant Garamond, serif",
-                                  }}
-                                >
-                                  {item.title}
-                                </h3>
+              <h3
+                className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                {item.title}
+              </h3>
 
-                                <p className="mt-3 text-[15px] leading-7 text-[#5f564d]">
-                                  {item.subtitle}
-                                </p>
-                              </div>
-                            </div>
-                          </motion.article>
-                        );
-                      })}
-                  </div>
+              <p className="mt-3 text-[15px] leading-7 text-[#5f564d]">
+                {item.subtitle}
+              </p>
+            </div>
+          </div>
+        </motion.article>
+      );
+    })}
+  </div>
 
-                  <motion.article
-                    whileHover={{ y: -6 }}
-                    transition={{ duration: 0.35 }}
-                    className="group relative overflow-hidden rounded-[1.7rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_26px_70px_rgba(39,30,22,0.07)] backdrop-blur-xl"
-                  >
-                    <div className="relative h-[560px] overflow-hidden md:h-[680px] xl:h-[720px]">
-                      <img
-                        src={micropigmentacionCategories[0]?.image}
-                        alt={micropigmentacionCategories[0]?.title}
-                        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
-                      />
+  <motion.article
+    whileHover={{ y: -6 }}
+    transition={{ duration: 0.35 }}
+    className="hidden xl:block group relative overflow-hidden rounded-[1.7rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_26px_70px_rgba(39,30,22,0.07)] backdrop-blur-xl"
+  >
+    <div className="relative h-[560px] overflow-hidden md:h-[680px] xl:h-[720px]">
+      <img
+        src={micropigmentacionCategories[0]?.image}
+        alt={micropigmentacionCategories[0]?.title}
+        className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+      />
 
-                      <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-[rgba(255,250,246,0.98)] via-[rgba(255,250,246,0.72)] to-transparent" />
+      <div className="absolute inset-x-0 bottom-0 h-[34%] bg-gradient-to-t from-[rgba(255,250,246,0.98)] via-[rgba(255,250,246,0.72)] to-transparent" />
 
-                      <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
-                        <p
-                          className="text-[11px] uppercase tracking-[0.24em] text-[#938476]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          PMU · 01
-                        </p>
+      <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+        <p
+          className="text-[11px] uppercase tracking-[0.24em] text-[#938476]"
+          style={{ fontFamily: "Cormorant Garamond, serif" }}
+        >
+          PMU · 01
+        </p>
 
-                        <h3
-                          className="mt-2 text-[2.8rem] font-semibold leading-[0.9] tracking-tight text-[#201a15] md:text-[4rem]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          {micropigmentacionCategories[0]?.title || "Labios"}
-                        </h3>
+        <h3
+          className="mt-2 text-[2.8rem] font-semibold leading-[0.9] tracking-tight text-[#201a15] md:text-[4rem]"
+          style={{ fontFamily: "Cormorant Garamond, serif" }}
+        >
+          {micropigmentacionCategories[0]?.title || "Labios"}
+        </h3>
 
-                        <p className="mt-4 max-w-md text-[15px] leading-7 text-[#5f564d]">
-                          {micropigmentacionCategories[0]?.subtitle ||
-                            "Efecto full lips, Aqualips, Solo Contorno, Neutralización"}
-                        </p>
-                      </div>
-                    </div>
-                  </motion.article>
+        <p className="mt-4 max-w-md text-[15px] leading-7 text-[#5f564d]">
+          {micropigmentacionCategories[0]?.subtitle ||
+            "Efecto full lips, Aqualips, Solo Contorno, Neutralización"}
+        </p>
+      </div>
+    </div>
+  </motion.article>
 
-                  <div className="hidden xl:flex xl:flex-col xl:gap-5">
-                    {micropigmentacionCategories
-                      .slice(3, 5)
-                      .map((item, localIndex) => {
-                        const index = localIndex + 3;
+  <div className="hidden xl:flex xl:flex-col xl:gap-5">
+    {micropigmentacionCategories.slice(3, 5).map((item, localIndex) => {
+      const index = localIndex + 3;
 
-                        return (
-                          <motion.article
-                            key={item.title}
-                            whileHover={{ y: -4 }}
-                            transition={{ duration: 0.3 }}
-                            className="group relative overflow-hidden rounded-[1.5rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
-                          >
-                            <div className="grid min-h-[190px] grid-cols-[0.95fr_1.05fr]">
-                              <div className="relative overflow-hidden">
-                                <img
-                                  src={item.image}
-                                  alt={item.title}
-                                  className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
-                                />
-                              </div>
+      return (
+        <motion.article
+          key={item.title}
+          whileHover={{ y: -4 }}
+          transition={{ duration: 0.3 }}
+          className="group relative overflow-hidden rounded-[1.5rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
+        >
+          <div className="grid min-h-[190px] grid-cols-[0.95fr_1.05fr]">
+            <div className="relative overflow-hidden">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
+              />
+            </div>
 
-                              <div className="flex flex-col justify-center px-5 py-5">
-                                <p
-                                  className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
-                                  style={{
-                                    fontFamily: "Cormorant Garamond, serif",
-                                  }}
-                                >
-                                  PMU · {String(index + 1).padStart(2, "0")}
-                                </p>
+            <div className="flex flex-col justify-center px-5 py-5">
+              <p
+                className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                PMU · {String(index + 1).padStart(2, "0")}
+              </p>
 
-                                <h3
-                                  className="mt-2 text-[1.85rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
-                                  style={{
-                                    fontFamily: "Cormorant Garamond, serif",
-                                  }}
-                                >
-                                  {item.title}
-                                </h3>
+              <h3
+                className="mt-2 text-[1.85rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
+                style={{ fontFamily: "Cormorant Garamond, serif" }}
+              >
+                {item.title}
+              </h3>
 
-                                <p className="mt-3 text-[14px] leading-6 text-[#5f564d]">
-                                  {item.subtitle}
-                                </p>
-                              </div>
-                            </div>
-                          </motion.article>
-                        );
-                      })}
-                  </div>
+              <p className="mt-3 text-[14px] leading-6 text-[#5f564d]">
+                {item.subtitle}
+              </p>
+            </div>
+          </div>
+        </motion.article>
+      );
+    })}
+  </div>
 
-                  <div className="grid gap-4 xl:hidden">
-                    {micropigmentacionCategories.map((item, index) => (
-                      <motion.article
-                        key={item.title}
-                        whileHover={{ y: -3 }}
-                        transition={{ duration: 0.25 }}
-                        className="group relative overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
-                      >
-                        <div className="grid min-h-[220px] grid-cols-[1fr] md:grid-cols-[0.95fr_1.05fr]">
-                          <div className="relative overflow-hidden">
-                            <img
-                              src={item.image}
-                              alt={item.title}
-                              className="h-[240px] w-full object-cover transition duration-700 group-hover:scale-[1.02] md:h-full"
-                            />
-                          </div>
+            <div className="grid gap-4 xl:hidden">
+              {micropigmentacionCategories.map((item, index) => (
+                <motion.article
+                  key={item.title}
+                  whileHover={{ y: -3 }}
+                  transition={{ duration: 0.25 }}
+                  className="group relative overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_16px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl"
+                >
+                  <div className="grid min-h-[220px] grid-cols-[1fr] md:grid-cols-[0.95fr_1.05fr]">
+                    <div className="relative h-[240px] overflow-hidden md:h-full">
+            <img
+              src={item.image}
+              alt={item.title}
+              className={`w-full object-cover transition duration-700 group-hover:scale-[1.02] md:h-full md:w-full ${
+                item.title === "Cejas" || item.title === "Capilar" || item.title === "Areolas"
+                  ? "w-full rotate-90 scale-[1] -translate-y-20 md:rotate-0 md:scale-100 md:translate-y-0"
+                  : "h-[240px] md:h-full"
+              }`}
+            />
+          </div>
 
-                          <div className="flex flex-col justify-center px-5 py-5">
-                            <p
-                              className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
-                              style={{
-                                fontFamily: "Cormorant Garamond, serif",
-                              }}
-                            >
-                              PMU · {String(index + 1).padStart(2, "0")}
-                            </p>
+          <div className="flex flex-col justify-center px-5 py-5">
+            <p
+              className="text-[10px] uppercase tracking-[0.22em] text-[#9a8a7b]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              PMU · {String(index + 1).padStart(2, "0")}
+            </p>
 
-                            <h3
-                              className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
-                              style={{
-                                fontFamily: "Cormorant Garamond, serif",
-                              }}
-                            >
-                              {item.title}
-                            </h3>
+            <h3
+              className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              {item.title}
+            </h3>
 
-                            <p className="mt-3 text-[15px] leading-7 text-[#5f564d]">
-                              {item.subtitle}
-                            </p>
-                          </div>
-                        </div>
-                      </motion.article>
-                    ))}
-                  </div>
-                </div>
+            <p className="mt-3 text-[15px] leading-7 text-[#5f564d]">
+              {item.subtitle}
+            </p>
+          </div>
+        </div>
+      </motion.article>
+    ))}
+  </div>
+</div>
+                
               </motion.div>
             </div>
           </section>
@@ -1274,23 +1277,31 @@ export default function ShakeLandingPage() {
             >
               <motion.div variants={fadeUp} className="text-center">
                 <p
-                  className="text-xs uppercase tracking-[0.24em] text-[#938476]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Testimonios
-                </p>
+    className="text-xs uppercase tracking-[0.24em] text-[#938476]"
+    style={{ fontFamily: "Cormorant Garamond, serif" }}
+  >
+    Testimonios
+  </p>
 
-                <h2
-                  className="mx-auto mt-4 max-w-2xl text-3xl font-semibold leading-[1.12] tracking-tight text-[#201a15] md:text-4xl"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Lo que comparten
-                  <br />
-                  después de Casa Shake.
-                </h2>
+  <h3
+    className="mx-auto mt-1 max-w-2xl text-3xl font-semibold leading-[1.12] tracking-tight text-[#201a15] md:text-2xl"
+    style={{ fontFamily: "Cormorant Garamond, serif" }}
+  >
+    Lo que comparten
+    <br />
+    después de
+  </h3>
+
+  <div className="mt-[-3px] flex justify-center">
+    <img
+      src="/logo-cs-negro.png"
+      alt="Casa Shake"
+      className="h-12 w-auto md:h-30"
+    />
+  </div>
               </motion.div>
 
-              <motion.div variants={softReveal} className="relative mt-16">
+              <motion.div variants={softReveal} className="relative mt-5">
                 <motion.button
                   type="button"
                   onClick={prevTestimonial}
@@ -1451,7 +1462,18 @@ export default function ShakeLandingPage() {
                       key={index}
                       type="button"
                       aria-label={`Ir al testimonio ${index + 1}`}
-                      onClick={() => setActiveTestimonial(index)}
+                      onClick={() => {
+  setActiveScene(scene);
+
+  if (window.innerWidth < 1280) {
+    requestAnimationFrame(() => {
+      serviciosSectionRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  }
+}}
                       whileTap={{ scale: 0.9 }}
                       className={`h-2 rounded-full transition-all duration-300 ${
                         index === activeTestimonial
