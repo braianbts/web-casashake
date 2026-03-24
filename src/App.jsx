@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
+function ServiciosSection({ artServices }) {
   const [activeScene, setActiveScene] = useState(0);
 
   const firstArt = artServices[0];
@@ -754,7 +754,7 @@ export default function ShakeLandingPage() {
                 playsInline
                 className="absolute inset-0 z-0 h-full w-full object-cover"
               >
-                <source src="/fondoweb-comp.mov" type="video/mp4" />
+                <source src="/fondoweb2.mov" type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(12,10,10,0.60)_0%,rgba(12,10,10,0.70)_22%,rgba(12,10,10,0.50)_58%,rgba(12,10,10,0.70)_100%)]" />
