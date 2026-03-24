@@ -1,18 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-// type Service = {
-//   title: string;
-//   description: string;
-//   image: string;
-// };
-
-// type ServiciosSectionProps = {
-//   artServices: Service[];
-//   dermatoxServices: string[];
-//   esteticaServices: string[];
-// };
-
 function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
   const [activeScene, setActiveScene] = useState(0);
 
@@ -100,34 +88,39 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
             >
               <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:pb-0">
                 <motion.article
-                  initial={{ opacity: 0, x: -24, y: 18 }}
-                  animate={{ opacity: 1, x: 0, y: 0 }}
-                  exit={{ opacity: 0, x: -30, y: 8 }}
-                  transition={{ duration: 0.6, delay: 0.08 }}
-                  className="rounded-[1.9rem] bg-[#f0d7d3] p-5 shadow-[0_14px_36px_rgba(32,26,21,0.05)] xl:p-6"
-                >
-                  <p
-                    className="text-[11px] uppercase tracking-[0.18em] text-[#7a5f58]"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
-                  >
-                    Propuesta integral
-                  </p>
+  initial={{ opacity: 0, x: -24, y: 18 }}
+  animate={{ opacity: 1, x: 0, y: 0 }}
+  exit={{ opacity: 0, x: -30, y: 8 }}
+  transition={{ duration: 0.6, delay: 0.08 }}
+  className="overflow-hidden rounded-[1.9rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.05)]"
+>
+  <div className="flex h-full flex-col">
+    <div className="relative h-[65%] overflow-hidden">
+      <img
+        src="/remocion.png"
+        alt="Remoción de microtatuajes"
+        className="h-full w-full object-cover object-[center_65%]"
+      />
+      <div className="absolute inset-x-0 bottom-0 h-[15%] bg-gradient-to-t from-[#ffffff] via-[rgba(255,255,255,0.85)] to-transparent" />
+    </div>
 
-                  <h3
-                    className="mt-3 text-3xl font-semibold leading-[0.98] tracking-tight text-[#201a15]"
-                    style={{ fontFamily: "Cormorant Garamond, serif" }}
-                  >
-                    Arte,
-                    <br />
-                    belleza y
-                    <br />
-                    tratamientos.
-                  </h3>
+    <div className="flex h-[35%] flex-col justify-end p-5 xl:p-6">
 
-                  <p className="mt-4 text-sm leading-6 text-[#5e5348]">
-                    Una experiencia visual pensada para mezclar expresión, cuidado y estética
-                    profesional.
-                  </p>
+       <p
+                        className="text-[11px] uppercase tracking-[0.2em] text-[#8d7f71]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Servicios de Corrección
+                      </p>
+
+      <h4
+        className="mt-3 whitespace-nowrap text-[1.4rem] font-semibold leading-none tracking-tight text-[#201a15] xl:text-[1.4rem]"
+        style={{ fontFamily: "Cormorant Garamond, serif" }}
+      >
+        Remoción de microtatuajes.
+      </h4>
+    </div>
+  </div>
                 </motion.article>
 
                 <motion.article
@@ -931,7 +924,7 @@ export default function ShakeLandingPage() {
                           key={item.title}
                           whileHover={{ y: -4 }}
                           transition={{ duration: 0.3 }}
-                          className="group relative overflow-hidden rounded-[1.9rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_16px_40px_rgba(32,26,21,0.04)]"
+                          className="group relative overflow-hidden rounded-[1.5rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_16px_40px_rgba(32,26,21,0.04)]"
                         >
                           <div className="grid min-h-[230px] grid-cols-[0.95fr_1.05fr]">
                             <div className="relative overflow-hidden">
@@ -971,7 +964,7 @@ export default function ShakeLandingPage() {
                   <motion.article
                     whileHover={{ y: -6 }}
                     transition={{ duration: 0.35 }}
-                    className="group relative overflow-hidden rounded-[2.2rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_24px_70px_rgba(32,26,21,0.06)]"
+                    className="group relative overflow-hidden rounded-[1.5rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_24px_70px_rgba(32,26,21,0.06)]"
                   >
                     <div className="relative h-[560px] overflow-hidden md:h-[680px] xl:h-[720px]">
                       <img
@@ -1015,7 +1008,7 @@ export default function ShakeLandingPage() {
                           key={item.title}
                           whileHover={{ y: -4 }}
                           transition={{ duration: 0.3 }}
-                          className="group relative overflow-hidden rounded-[1.9rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_16px_40px_rgba(32,26,21,0.04)]"
+                          className="group relative overflow-hidden rounded-[1.5rem] border border-[#e7dfd3] bg-[#fcfaf7] shadow-[0_16px_40px_rgba(32,26,21,0.04)]"
                         >
                           <div className="grid min-h-[190px] grid-cols-[0.95fr_1.05fr]">
                             <div className="relative overflow-hidden">
