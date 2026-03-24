@@ -43,494 +43,465 @@ function ServiciosSection({ artServices, dermatoxServices, esteticaServices }) {
 
   const currentScene = scenes[activeScene];
 
-  return (
-    <section id="servicios" className="relative w-full h-[100svh] overflow-hidden py-4 xl:py-6 xl:px-20">
-  <div className="mx-auto flex h-full max-w-[1720px] flex-col px-4 sm:px-6 lg:px-10 xl:px-14">
-    <div className="mb-4 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
-      <div>
-        <p
-          className="text-sm uppercase tracking-[0.22em] text-[#8d7f71]"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          {currentScene.eyebrow}
-        </p>
-
-        <AnimatePresence mode="wait">
-          <motion.h2
-            key={currentScene.title}
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -18 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-3 whitespace-pre-line text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+ return (
+  <section
+    id="servicios"
+    className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:h-[100svh] xl:overflow-hidden xl:px-20 xl:py-6"
+  >
+    <div className="mx-auto flex min-h-full max-w-[1720px] flex-col xl:h-full xl:px-14">
+      <div className="mb-4 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
+        <div>
+          <p
+            className="text-sm uppercase tracking-[0.22em] text-[#8d7f71]"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
-            {currentScene.title}
-          </motion.h2>
+            {currentScene.eyebrow}
+          </p>
+
+          <AnimatePresence mode="wait">
+            <motion.h2
+              key={currentScene.title}
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -18 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-3 whitespace-pre-line text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              {currentScene.title}
+            </motion.h2>
+          </AnimatePresence>
+        </div>
+
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={currentScene.description}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.55, delay: 0.05 }}
+            className="max-w-xl text-sm leading-6 text-[#5e5348] md:text-base md:leading-7"
+          >
+            {currentScene.description}
+          </motion.p>
         </AnimatePresence>
       </div>
 
-      <AnimatePresence mode="wait">
-        <motion.p
-          key={currentScene.description}
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -16 }}
-          transition={{ duration: 0.55, delay: 0.05 }}
-          className="max-w-xl text-sm leading-6 text-[#5e5348] md:text-base md:leading-7"
-        >
-          {currentScene.description}
-        </motion.p>
-      </AnimatePresence>
-    </div>
-
-    <div className="relative flex flex-1 min-h-0 flex-col overflow-hidden">
-      <AnimatePresence mode="wait">
-        {activeScene === 0 ? (
-          <motion.div
-            key="scene-art"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex-1 min-h-0"
-          >
-            <div className="grid h-full min-h-0 gap-4 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr]">
-              <motion.article
-                initial={{ opacity: 0, x: -24, y: 18 }}
-                animate={{ opacity: 1, x: 0, y: 0 }}
-                exit={{ opacity: 0, x: -30, y: 8 }}
-                transition={{ duration: 0.6, delay: 0.08 }}
-                className="rounded-[1.9rem] bg-[#f0d7d3] p-5 xl:p-6 shadow-[0_14px_36px_rgba(32,26,21,0.05)]"
-              >
-                <p
-                  className="text-[11px] uppercase tracking-[0.18em] text-[#7a5f58]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
+      <div className="relative flex flex-1 flex-col overflow-visible xl:min-h-0 xl:overflow-hidden">
+        <AnimatePresence mode="wait">
+          {activeScene === 0 ? (
+            <motion.div
+              key="scene-art"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+              className="relative flex-1 xl:min-h-0"
+            >
+              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:pb-0">
+                <motion.article
+                  initial={{ opacity: 0, x: -24, y: 18 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -30, y: 8 }}
+                  transition={{ duration: 0.6, delay: 0.08 }}
+                  className="rounded-[1.9rem] bg-[#f0d7d3] p-5 shadow-[0_14px_36px_rgba(32,26,21,0.05)] xl:p-6"
                 >
-                  Propuesta integral
-                </p>
-
-                <h3
-                  className="mt-3 text-3xl font-semibold leading-[0.98] tracking-tight text-[#201a15]"
-                  style={{ fontFamily: "Cormorant Garamond, serif" }}
-                >
-                  Arte,
-                  <br />
-                  belleza y
-                  <br />
-                  tratamientos.
-                </h3>
-
-                <p className="mt-4 text-sm leading-6 text-[#5e5348]">
-                  Una experiencia visual pensada para mezclar expresión, cuidado y estética
-                  profesional.
-                </p>
-              </motion.article>
-
-              <motion.article
-                initial={{ opacity: 0, x: 36, y: 20, scale: 0.96 }}
-                animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -30, y: -10, scale: 0.98 }}
-                transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                className="relative self-start overflow-hidden rounded-[2.2rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] xl:row-span-2 h-[420px] md:h-[520px] xl:h-[62vh] min-h-0"
-              >
-                <div className="relative h-full overflow-hidden rounded-[2.2rem]">
-                  <video
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    className="h-full w-full object-cover"
+                  <p
+                    className="text-[11px] uppercase tracking-[0.18em] text-[#7a5f58]"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
                   >
-                    <source src="/tattoovideo.mov" type="video/mp4" />
-                  </video>
+                    Propuesta integral
+                  </p>
 
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(25,20,16,0.82)] via-[rgba(25,20,16,0.24)] to-transparent p-5 md:p-6 xl:p-7">
-                    <p
-                      className="text-[11px] uppercase tracking-[0.2em] text-[#f7eadb]"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
-                    >
-                      Servicios de Arte
-                    </p>
+                  <h3
+                    className="mt-3 text-3xl font-semibold leading-[0.98] tracking-tight text-[#201a15]"
+                    style={{ fontFamily: "Cormorant Garamond, serif" }}
+                  >
+                    Arte,
+                    <br />
+                    belleza y
+                    <br />
+                    tratamientos.
+                  </h3>
 
-                    <h3
-                      className="mt-2 text-3xl font-semibold leading-[0.95] tracking-tight text-white md:text-5xl"
-                      style={{ fontFamily: "Cormorant Garamond, serif" }}
-                    >
-                      {firstArt?.title || "Tatuajes"}
-                    </h3>
+                  <p className="mt-4 text-sm leading-6 text-[#5e5348]">
+                    Una experiencia visual pensada para mezclar expresión, cuidado y estética
+                    profesional.
+                  </p>
+                </motion.article>
 
-                    <p className="mt-3 max-w-md text-sm leading-6 text-[#f3e8dc] md:text-base">
-                      {firstArt?.description ||
-                        "Diseño, expresión y detalle en una propuesta artística cuidada de principio a fin."}
-                    </p>
-                  </div>
-                </div>
-              </motion.article>
-
-              <motion.article
-  initial={{ opacity: 0, x: 26, y: 12 }}
-  animate={{ opacity: 1, x: 0, y: 0 }}
-  exit={{ opacity: 0, x: 28, y: -6 }}
-  transition={{ duration: 0.68, delay: 0.12 }}
-  className="overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_34px_rgba(32,26,21,0.05)] xl:row-span-2 h-full min-h-0"
->
-  <div className="flex h-full flex-col">
-    <div className="relative h-[72%] overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="h-full w-full object-cover"
-      >
-        <source src="/joyeria1.mov" type="video/mp4" />
-      </video>
-
-      <div className="absolute inset-x-0 bottom-0 h-[10%] bg-gradient-to-t from-[#fffdf9] via-[rgba(255,253,249,0.92)] to-transparent" />
-    </div>
-
-    <div className="flex h-[28%] flex-col justify-end p-5 xl:p-6">
-      <p
-        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
-      >
-        Servicio destacado
-      </p>
-
-      <h4
-        className="mt-2 text-[2rem] xl:text-[2.35rem] font-semibold leading-[0.92] tracking-tight text-[#201a15]"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
-      >
-        {thirdArt?.title || "Joyería dental"}
-      </h4>
-
-      <p className="mt-3 text-sm leading-6 text-[#5e5348]">
-        {thirdArt?.description || "Detalles que aportan identidad y presencia."}
-      </p>
-    </div>
-  </div>
-              </motion.article>
-
-              <motion.article
-  initial={{ opacity: 0, x: -18, y: 28 }}
-  animate={{ opacity: 1, x: 0, y: 0 }}
-  exit={{ opacity: 0, x: -18, y: 20 }}
-  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-  className="overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_34px_rgba(32,26,21,0.05)] h-full min-h-0"
->
-  <div className="flex h-full min-h-0 flex-col">
-    <div className="relative h-[56%] overflow-hidden xl:h-[65%]">
-      <img
-        src={secondArt?.image || "/perforaciones.png"}
-        alt={secondArt?.title || "Servicio secundario"}
-        className="h-full w-full object-cover"
-      />
-      <div className="absolute inset-x-0 bottom-0 h-[10%] bg-gradient-to-t from-[#fffdf9] via-[rgba(255,253,249,1)] to-transparent" />
-    </div>
-
-    <div className="flex-1 p-4 xl:p-4">
-      <p
-        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
-        style={{ fontFamily: "Cormorant Garamond, serif" }}
-      >
-        Arte corporal
-      </p>
-
-      <h4 className="mt-2 text-2xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
-        {secondArt?.title || "Perforaciones"}
-      </h4>
-    </div>
-  </div>
-              </motion.article>
-            </div>
-          </motion.div>
-        ) : (
-          <motion.div
-            key="scene-beauty"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.45 }}
-            className="relative flex-1 min-h-0"
-          >
-            <div className="grid h-full min-h-0 gap-4 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr]">
-              {/* IZQUIERDA - SALUD - OK*/}
-              <motion.article
-  initial={{ opacity: 0, x: -30, y: 20 }}
-  animate={{ opacity: 1, x: 0, y: 0 }}
-  exit={{ opacity: 0, x: -28, y: 10 }}
-  transition={{ duration: 0.6, delay: 0.08 }}
-  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.05)] xl:col-start-1 xl:row-start-1 xl:row-span-2 h-full min-h-0"
->
-  <div className="flex h-full flex-col">
-
-    {/* VIDEO PROTAGONISTA */}
-    <div className="relative h-[72%] overflow-hidden">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        className="h-full w-full object-cover"
-      >
-        <source src="/salud.mov" type="video/mp4" />
-      </video>
-
-      {/* degradado más suave */}
-      <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,253,249,1)] via-[rgba(255,253,249,0.9)] to-transparent" />
-    </div>
-
-    {/* TEXTO COMPACTO */}
-    <div className="flex h-[28%] flex-col justify-start p-5 xl:p-6 -mt-6 xl:-mt-28 relative z-10">
-      <div>
-        <p
-          className="text-[10px] uppercase tracking-[0.18em] text-[#7b6d5d]"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          Belleza y salud
-        </p>
-
-        <h3
-          className="mt-2 text-[2rem] xl:text-[rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          Cuidado
-          <br />
-          de la piel.
-        </h3>
-
-        <p className="mt-2 text-sm leading-5 text-[#5e5348]">
-          Tratamientos orientados a mejorar la calidad de la piel.
-        </p>
-      </div>
-
-      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
-        <p className="text-xs leading-5 text-[#5e5348]">
-          Acné, manchas, rosácea, rejuvenecimiento.
-        </p>
-      </div>
-    </div>
-
-  </div>
-              </motion.article>
-
-              {/* CENTRO ARRIBA — MESO */}
-              <motion.article
-                initial={{ opacity: 0, x: 20, y: 16, scale: 0.97 }}
-                animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -20, y: -8, scale: 0.98 }}
-                transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-                className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] xl:col-start-2 xl:col-span-1 xl:row-start-1 min-h-0 xl:h-[460px]"
-              >
-                <div className="flex h-full flex-col">
-                  <div className="relative h-[46%] overflow-hidden">
-                    <img
-                      src="/meso.JPEG"
-                      alt="Mesoterapia"
-                      className="h-full w-full scale-110 object-cover object-[center_18%]"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,253,249,0.95)] to-transparent" />
-                  </div>
-
-                  <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
-                    <div>
-                      <p
-                        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Mesoterapia
-                      </p>
-
-                      <h3
-                        className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Definición
-                        <br />
-                        y volumen.
-                      </h3>
-
-                      <p className="mt-2 text-sm leading-5 text-[#5e5348]">
-                        Tratamientos orientados a modelar, aportar volumen y realzar rasgos.
-                      </p>
-                    </div>
-
-                          <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
-        <p className="text-xs leading-5 text-[#5e5348]">
-          Lipopapada, Aumento de glúteos, Rinomodelación, Volumen de labios, Babyface.
-        </p>
-      </div>
-
-                    {/* <div className="mt-3 grid gap-2">
-                      {[
-                        "Lipopapada.",
-                        "Aumento de glúteos.",
-                        "Rinomodelación.",
-                        "Volumen de labios.",
-                        "Babyface.",
-                      ].map((item, index) => (
-                        <article
-                          key={item}
-                          className="rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3"
-                        >
-                          <div className="flex items-start gap-3">
-                            <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#c97946] text-[11px] font-semibold text-white">
-                              {index + 1}
-                            </span>
-                            <p className="text-sm leading-5 text-[#5e5348]">{item}</p>
-                          </div>
-                        </article>
-                      ))}
-                    </div> */}
-                  </div>
-                </div>
-              </motion.article>
-
-              {/* CENTRO ABAJO — COSMETO */}
-              <motion.article
-                initial={{ opacity: 0, x: 28, y: 16, scale: 0.97 }}
-                animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                exit={{ opacity: 0, x: -24, y: -8, scale: 0.98 }}
-                transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
-                className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] xl:col-start-3 xl:col-span-1 xl:row-start-1 min-h-0 xl:h-[460px]"
-              >
-                <div className="flex h-full flex-col">
-                  <div className="relative h-[46%] overflow-hidden">
+                <motion.article
+                  initial={{ opacity: 0, x: 36, y: 20, scale: 0.96 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -30, y: -10, scale: 0.98 }}
+                  transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative self-start overflow-hidden rounded-[2.2rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] min-h-0 h-[420px] md:h-[520px] xl:row-span-2 xl:h-[62vh]"
+                >
+                  <div className="relative h-full overflow-hidden rounded-[2.2rem]">
                     <video
                       autoPlay
                       muted
                       loop
                       playsInline
-                      className="h-full w-full scale-110 object-cover object-[center_58%]"
+                      className="h-full w-full object-cover"
                     >
-                      <source src="/cosmeto.mov" type="video/mp4" />
+                      <source src="/tattoovideo.mov" type="video/mp4" />
                     </video>
-                    <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,253,249,1)] to-transparent" />
-                  </div>
 
-                  <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
-                    <div>
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(25,20,16,0.82)] via-[rgba(25,20,16,0.24)] to-transparent p-5 md:p-6 xl:p-7">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.2em] text-[#f7eadb]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Servicios de Arte
+                      </p>
+
+                      <h3
+                        className="mt-2 text-3xl font-semibold leading-[0.95] tracking-tight text-white md:text-5xl"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        {firstArt?.title || "Tatuajes"}
+                      </h3>
+
+                      <p className="mt-3 max-w-md text-sm leading-6 text-[#f3e8dc] md:text-base">
+                        {firstArt?.description ||
+                          "Diseño, expresión y detalle en una propuesta artística cuidada de principio a fin."}
+                      </p>
+                    </div>
+                  </div>
+                </motion.article>
+
+                <motion.article
+                  initial={{ opacity: 0, x: 26, y: 12 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: 28, y: -6 }}
+                  transition={{ duration: 0.68, delay: 0.12 }}
+                  className="overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_34px_rgba(32,26,21,0.05)] min-h-0 xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[72%] overflow-hidden">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="h-full w-full object-cover"
+                      >
+                        <source src="/joyeria1.mov" type="video/mp4" />
+                      </video>
+
+                      <div className="absolute inset-x-0 bottom-0 h-[10%] bg-gradient-to-t from-[#fffdf9] via-[rgba(255,253,249,0.92)] to-transparent" />
+                    </div>
+
+                    <div className="flex h-[28%] flex-col justify-end p-5 xl:p-6">
                       <p
                         className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
-                        Cosmeto
+                        Servicio destacado
                       </p>
 
-                      <h3
-                        className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
+                      <h4
+                        className="mt-2 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
-                        Cuidado
-                        <br />
-                        profundo.
-                      </h3>
+                        {thirdArt?.title || "Joyería dental"}
+                      </h4>
 
-                      <p className="mt-2 text-sm leading-5 text-[#5e5348]">
-                        Tratamientos enfocados en renovar, limpiar y mejorar la textura de la piel
-                        con un enfoque delicado y profesional.
-                      </p>
-                    </div>
-
-                    <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
-                      <p className="text-xs leading-5 text-[#5e5348]">
-                        Peeling, Limpieza facial, Dermaplaning, Dermapen.
+                      <p className="mt-3 text-sm leading-6 text-[#5e5348]">
+                        {thirdArt?.description || "Detalles que aportan identidad y presencia."}
                       </p>
                     </div>
                   </div>
-                </div>
-              </motion.article>
+                </motion.article>
 
-              {/* DERECHA -ESTÉTICA - OK */}
-              <motion.article
-  initial={{ opacity: 0, x: 26, y: 18 }}
-  animate={{ opacity: 1, x: 0, y: 0 }}
-  exit={{ opacity: 0, x: 26, y: 16 }}
-  transition={{ duration: 0.68, delay: 0.12 }}
-  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.05)] xl:col-start-4 xl:row-start-1 xl:row-span-2 h-full min-h-0"
->
-  <div className="flex h-full flex-col">
-    <div className="relative h-[58%] overflow-hidden">
-      <img
-        src="/estetica.JPG"
-        alt="Estética"
-        className="h-full w-full scale-130 object-cover object-[center_140%]"
-      />
-      <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[rgba(255,253,249,1)] via-[rgba(255,253,249,1)] to-transparent" />
-    </div>
-
-    <div className="relative z-10 -mt-12 flex h-[42%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
-      <div>
-        <p
-          className="text-[11px] uppercase tracking-[0.18em] text-[#7b6d5d]"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          Estética
-        </p>
-
-        <h3
-          className="mt-2 text-[2rem] xl:text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
-          style={{ fontFamily: "Cormorant Garamond, serif" }}
-        >
-          Detalles
-          <br />
-          que realzan.
-        </h3>
-
-        <p className="mt-3 text-sm leading-6 text-[#5e5348]">
-          Tratamientos pensados para definir, hidratar y potenciar rasgos con
-          resultados delicados y actuales.
-        </p>
-      </div>
-
-      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
-        <p className="text-xs leading-5 text-[#5e5348]">
-          Laminado y perfilado de cejas, Hydralips y BBlips.
-        </p>
-      </div>
-
-     
-    </div>
-  </div>
-              </motion.article>
-
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-     
-    </div>
-  </div>
-   {/* BOTON */}
-      <div className="mt-4 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[1.5rem] xl:z-30 xl:mt-0">
-        <div className="flex w-full justify-center">
-          <div className="flex items-center gap-2 rounded-full border border-[#eadfce]/80 bg-white/55 px-2 py-2 backdrop-blur-md xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
-            {[0, 1].map((scene) => {
-              const isActive = activeScene === scene;
-
-              return (
-                <button
-                  key={scene}
-                  type="button"
-                  onClick={() => setActiveScene(scene)}
-                  aria-label={`Ir a escena ${scene + 1}`}
-                  className={`flex h-9 w-9 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
-                    isActive
-                      ? "border-[#d7a18b] bg-[#d7a18b] text-white"
-                      : "border-[#e7dbcf] bg-[#fffaf6]/80 text-[#8e7868] hover:bg-white"
-                  }`}
+                <motion.article
+                  initial={{ opacity: 0, x: -18, y: 28 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -18, y: 20 }}
+                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1.8rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_34px_rgba(32,26,21,0.05)] min-h-0 xl:h-full"
                 >
-                  {scene + 1}
-                </button>
-              );
-            })}
+                  <div className="flex h-full min-h-0 flex-col">
+                    <div className="relative h-[56%] overflow-hidden xl:h-[65%]">
+                      <img
+                        src={secondArt?.image || "/perforaciones.png"}
+                        alt={secondArt?.title || "Servicio secundario"}
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[10%] bg-gradient-to-t from-[#fffdf9] via-[rgba(255,253,249,1)] to-transparent" />
+                    </div>
+
+                    <div className="flex-1 p-4 xl:p-4">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Arte corporal
+                      </p>
+
+                      <h4 className="mt-2 text-2xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
+                        {secondArt?.title || "Perforaciones"}
+                      </h4>
+                    </div>
+                  </div>
+                </motion.article>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="scene-beauty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45 }}
+              className="relative flex-1 xl:min-h-0"
+            >
+              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr] xl:pb-0">
+                {/* IZQUIERDA - SALUD - OK */}
+                <motion.article
+                  initial={{ opacity: 0, x: -30, y: 20 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -28, y: 10 }}
+                  transition={{ duration: 0.6, delay: 0.08 }}
+                  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.05)] min-h-0 xl:col-start-1 xl:row-start-1 xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[72%] overflow-hidden">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="h-full w-full object-cover"
+                      >
+                        <source src="/salud.mov" type="video/mp4" />
+                      </video>
+
+                      <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,253,249,1)] via-[rgba(255,253,249,0.9)] to-transparent" />
+                    </div>
+
+                    <div className="relative z-10 -mt-6 flex h-[28%] flex-col justify-start p-5 xl:-mt-28 xl:p-6">
+                      <div>
+                        <p
+                          className="text-[10px] uppercase tracking-[0.18em] text-[#7b6d5d]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Belleza y salud
+                        </p>
+
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Cuidado
+                          <br />
+                          de la piel.
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-5 text-[#5e5348]">
+                          Tratamientos orientados a mejorar la calidad de la piel.
+                        </p>
+                      </div>
+
+                      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
+                        <p className="text-xs leading-5 text-[#5e5348]">
+                          Acné, manchas, rosácea, rejuvenecimiento.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+
+                {/* CENTRO ARRIBA — MESO */}
+                <motion.article
+                  initial={{ opacity: 0, x: 20, y: 16, scale: 0.97 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -20, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] min-h-0 xl:col-start-2 xl:col-span-1 xl:row-start-1 xl:h-[460px]"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[46%] overflow-hidden">
+                      <img
+                        src="/meso.JPEG"
+                        alt="Mesoterapia"
+                        className="h-full w-full scale-110 object-cover object-[center_18%]"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,253,249,0.95)] to-transparent" />
+                    </div>
+
+                    <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                      <div>
+                        <p
+                          className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Mesoterapia
+                        </p>
+
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Definición
+                          <br />y volumen.
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-5 text-[#5e5348]">
+                          Tratamientos orientados a modelar, aportar volumen y realzar rasgos.
+                        </p>
+                      </div>
+
+                      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
+                        <p className="text-xs leading-5 text-[#5e5348]">
+                          Lipopapada, Aumento de glúteos, Rinomodelación, Volumen de labios, Babyface.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+
+                {/* CENTRO ABAJO — COSMETO */}
+                <motion.article
+                  initial={{ opacity: 0, x: 28, y: 16, scale: 0.97 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -24, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_22px_60px_rgba(32,26,21,0.08)] min-h-0 xl:col-start-3 xl:col-span-1 xl:row-start-1 xl:h-[460px]"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[46%] overflow-hidden">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="h-full w-full scale-110 object-cover object-[center_58%]"
+                      >
+                        <source src="/cosmeto.mov" type="video/mp4" />
+                      </video>
+                      <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,253,249,1)] to-transparent" />
+                    </div>
+
+                    <div className="flex h-[60%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                      <div>
+                        <p
+                          className="text-[11px] uppercase tracking-[0.18em] text-[#8d7f71]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Cosmeto
+                        </p>
+
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Cuidado
+                          <br />
+                          profundo.
+                        </h3>
+
+                        <p className="mt-2 text-sm leading-5 text-[#5e5348]">
+                          Tratamientos enfocados en renovar, limpiar y mejorar la textura de la piel
+                          con un enfoque delicado y profesional.
+                        </p>
+                      </div>
+
+                      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
+                        <p className="text-xs leading-5 text-[#5e5348]">
+                          Peeling, Limpieza facial, Dermaplaning, Dermapen.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+
+                {/* DERECHA -ESTÉTICA - OK */}
+                <motion.article
+                  initial={{ opacity: 0, x: 26, y: 18 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: 26, y: 16 }}
+                  transition={{ duration: 0.68, delay: 0.12 }}
+                  className="overflow-hidden rounded-[1rem] border border-[#e7dfd3] bg-[#fffdf9] shadow-[0_14px_36px_rgba(32,26,21,0.05)] min-h-0 xl:col-start-4 xl:row-start-1 xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[58%] overflow-hidden">
+                      <img
+                        src="/estetica.JPG"
+                        alt="Estética"
+                        className="h-full w-full scale-130 object-cover object-[center_140%]"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[48%] bg-gradient-to-t from-[rgba(255,253,249,1)] via-[rgba(255,253,249,1)] to-transparent" />
+                    </div>
+
+                    <div className="relative z-10 -mt-12 flex h-[42%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
+                      <div>
+                        <p
+                          className="text-[11px] uppercase tracking-[0.18em] text-[#7b6d5d]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Estética
+                        </p>
+
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
+                          style={{ fontFamily: "Cormorant Garamond, serif" }}
+                        >
+                          Detalles
+                          <br />
+                          que realzan.
+                        </h3>
+
+                        <p className="mt-3 text-sm leading-6 text-[#5e5348]">
+                          Tratamientos pensados para definir, hidratar y potenciar rasgos con
+                          resultados delicados y actuales.
+                        </p>
+                      </div>
+
+                      <div className="mt-3 rounded-[1rem] border border-[#ece1d4] bg-[#f8f1e8] px-3 py-3">
+                        <p className="text-xs leading-5 text-[#5e5348]">
+                          Laminado y perfilado de cejas, Hydralips y BBlips.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* BOTON */}
+        <div className="mt-6 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
+          <div className="flex w-full justify-center">
+            <div className="flex items-center gap-2 rounded-full border border-[#eadfce]/80 bg-white/70 px-2 py-2 backdrop-blur-md  xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
+              {[0, 1].map((scene) => {
+                const isActive = activeScene === scene;
+
+                return (
+                  <button
+                    key={scene}
+                    type="button"
+                    onClick={() => setActiveScene(scene)}
+                    aria-label={`Ir a escena ${scene + 1}`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
+                      isActive
+                        ? "border-[#d7a18b] bg-[#d7a18b] text-white"
+                        : "border-[#e7dbcf] bg-[#fffaf6]/80 text-[#8e7868] hover:bg-white"
+                    }`}
+                  >
+                    {scene + 1}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
-</section>
-  );
+    </div>
+  </section>
+);
 }
 
 export default function ShakeLandingPage() {
