@@ -33,442 +33,461 @@ function ServiciosSection({ artServices }) {
 
   const serviciosSectionRef = useRef(null);
 
-  return (
-    <section
-  ref={serviciosSectionRef}
-  id="servicios"
-  className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:h-[100svh] xl:overflow-hidden xl:px-20 xl:py-6"
->
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbf9f6_0%,#f7f4ef_45%,#f6f1eb_100%)]" />
-        <div className="absolute left-[6%] top-[12%] h-44 w-44 rounded-full bg-[#eadcf5] blur-3xl opacity-55" />
-        <div className="absolute right-[8%] top-[18%] h-44 w-44 rounded-full bg-[#f3dfe8] blur-3xl opacity-45" />
-        <div className="absolute left-[18%] bottom-[12%] h-40 w-40 rounded-full bg-[#efe3d8] blur-3xl opacity-45" />
-        <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#7e7062_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
-      </div>
+ return (
+  <section
+    ref={serviciosSectionRef}
+    id="servicios"
+    className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:overflow-hidden xl:h-[100svh] xl:px-20 xl:py-6"
+  >
+    <div className="pointer-events-none absolute inset-0">
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbf9f6_0%,#f7f4ef_45%,#f6f1eb_100%)]" />
+      <div className="absolute left-[6%] top-[12%] h-44 w-44 rounded-full bg-[#eadcf5] blur-3xl opacity-55" />
+      <div className="absolute right-[8%] top-[18%] h-44 w-44 rounded-full bg-[#f3dfe8] blur-3xl opacity-45" />
+      <div className="absolute left-[18%] bottom-[12%] h-40 w-40 rounded-full bg-[#efe3d8] blur-3xl opacity-45" />
+      <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#7e7062_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
+    </div>
 
-      <div className="mx-auto flex min-h-full max-w-[1720px] flex-col xl:h-full xl:px-14 relative z-10">
-        <div className="mb-4 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
-          <div>
-            <p
-              className="text-sm uppercase tracking-[0.22em] text-[#938476]"
-              style={{ fontFamily: "Cormorant Garamond, serif" }}
-            >
-              {currentScene.eyebrow}
-            </p>
-
-            <AnimatePresence mode="wait">
-              <motion.h2
-                key={currentScene.title}
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -18 }}
-                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                className="mt-3 whitespace-pre-line text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
-                style={{ fontFamily: "Cormorant Garamond, serif" }}
-              >
-                {currentScene.title}
-              </motion.h2>
-            </AnimatePresence>
-          </div>
+    <div className="relative z-10 mx-auto flex min-h-full max-w-[1720px] flex-col xl:h-full xl:px-14">
+      <div className="mb-4 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
+        <div>
+          <p
+            className="text-sm uppercase tracking-[0.22em] text-[#938476]"
+            style={{ fontFamily: "Cormorant Garamond, serif" }}
+          >
+            {currentScene.eyebrow}
+          </p>
 
           <AnimatePresence mode="wait">
-            <motion.p
-              key={currentScene.description}
-              initial={{ opacity: 0, y: 16 }}
+            <motion.h2
+              key={currentScene.title}
+              initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -16 }}
-              transition={{ duration: 0.55, delay: 0.05 }}
-              className="max-w-xl text-sm leading-6 text-[#5f564d] md:text-base md:leading-7"
+              exit={{ opacity: 0, y: -18 }}
+              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              className="mt-3 whitespace-pre-line text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
-              {currentScene.description}
-            </motion.p>
+              {currentScene.title}
+            </motion.h2>
           </AnimatePresence>
         </div>
 
-        <div className="relative flex flex-1 flex-col overflow-visible xl:min-h-0 xl:overflow-hidden">
-          <AnimatePresence mode="wait">
-            {activeScene === 0 ? (
-              <motion.div
-                key="scene-art"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-                className="relative flex-1 xl:min-h-0"
-              >
-                <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:pb-0">
-                  <motion.article
-                    initial={{ opacity: 0, x: -24, y: 18 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: -30, y: 8 }}
-                    transition={{ duration: 0.6, delay: 0.08 }}
-                    className="overflow-hidden rounded-[1.9rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] backdrop-blur-xl"
-                  >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[150%] overflow-hidden">
-                        <img
-                          src="/remocion.webp"
-                          alt="Remoción de microtatuajes"
-                          className="h-full w-full object-cover object-[center_65%]"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 h-[18%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.86)] to-transparent" />
-                      </div>
+        <AnimatePresence mode="wait">
+          <motion.p
+            key={currentScene.description}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.55, delay: 0.05 }}
+            className="max-w-xl text-sm leading-6 text-[#5f564d] md:text-base md:leading-7"
+          >
+            {currentScene.description}
+          </motion.p>
+        </AnimatePresence>
+      </div>
 
-                      <div className="flex h-[35%] mb-4 flex-col justify-end p-5 xl:p-6">
-                        <p
-                          className="text-[11px] uppercase tracking-[0.2em] text-[#938476]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          Servicios de Corrección
-                        </p>
-
-                        <h4
-                          className="mt-3 whitespace-nowrap text-[1.4rem] font-semibold leading-none tracking-tight text-[#201a15] xl:text-[1.4rem]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          Remoción de microtatuajes.
-                        </h4>
-                      </div>
+      <div className="relative flex flex-1 flex-col overflow-visible xl:min-h-0 xl:overflow-hidden">
+        <AnimatePresence mode="wait">
+          {activeScene === 0 ? (
+            <motion.div
+              key="scene-art"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+              className="relative flex-1 xl:min-h-0"
+            >
+              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:pb-0">
+                <motion.article
+                  initial={{ opacity: 0, x: -24, y: 18 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -30, y: 8 }}
+                  transition={{ duration: 0.6, delay: 0.08 }}
+                  className="overflow-hidden rounded-[1.9rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] backdrop-blur-xl"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[150%] overflow-hidden">
+                      <img
+                        src="/remocion.webp"
+                        alt="Remoción de microtatuajes"
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        className="h-full w-full object-cover object-[center_65%]"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[18%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.86)] to-transparent" />
                     </div>
-                  </motion.article>
 
-                  <motion.article
-                    initial={{ opacity: 0, x: 36, y: 20, scale: 0.96 }}
-                    animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: -30, y: -10, scale: 0.98 }}
-                    transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative self-start overflow-hidden rounded-[2.2rem] border border-white/30 bg-white/10 shadow-[0_28px_72px_rgba(39,30,22,0.09)] min-h-0 h-[420px] md:h-[520px] xl:row-span-2 xl:h-[62vh] backdrop-blur-md"
-                  >
-                    <div className="relative h-full overflow-hidden rounded-[2.2rem]">
+                    <div className="mb-4 flex h-[35%] flex-col justify-end p-5 xl:p-6">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.2em] text-[#938476]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Servicios de Corrección
+                      </p>
+
+                      <h4
+                        className="mt-3 whitespace-nowrap text-[1.4rem] font-semibold leading-none tracking-tight text-[#201a15] xl:text-[1.4rem]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Remoción de microtatuajes.
+                      </h4>
+                    </div>
+                  </div>
+                </motion.article>
+
+                <motion.article
+                  initial={{ opacity: 0, x: 36, y: 20, scale: 0.96 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -30, y: -10, scale: 0.98 }}
+                  transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative self-start overflow-hidden rounded-[2.2rem] border border-white/30 bg-white/10 shadow-[0_28px_72px_rgba(39,30,22,0.09)] min-h-0 h-[420px] backdrop-blur-md md:h-[520px] xl:row-span-2 xl:h-[62vh]"
+                >
+                  <div className="relative h-full overflow-hidden rounded-[2.2rem]">
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      webkit-playsinline="true"
+                      preload="metadata"
+                      disablePictureInPicture
+                      aria-hidden="true"
+                      className="pointer-events-none h-full w-full object-cover"
+                    >
+                      <source
+                        src="/compressed/tattoovideo.mp4"
+                        type="video/mp4"
+                      />
+                    </video>
+
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,218,246,0.15),transparent_32%)]" />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(22,18,16,0.78)] via-[rgba(22,18,16,0.24)] to-transparent p-5 md:p-6 xl:p-7">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.2em] text-[#f5ecf6]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Servicios de Arte
+                      </p>
+
+                      <h3
+                        className="mt-2 text-3xl font-semibold leading-[0.95] tracking-tight text-white md:text-5xl"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        {firstArt?.title || "Tatuajes"}
+                      </h3>
+
+                      <p className="mt-3 max-w-md text-sm leading-6 text-white/78 md:text-base">
+                        {firstArt?.description ||
+                          "Diseño, expresión y detalle en una propuesta artística cuidada de principio a fin."}
+                      </p>
+                    </div>
+                  </div>
+                </motion.article>
+
+                <motion.article
+                  initial={{ opacity: 0, x: 26, y: 12 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: 28, y: -6 }}
+                  transition={{ duration: 0.68, delay: 0.12 }}
+                  className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[80%] overflow-hidden">
                       <video
                         autoPlay
                         muted
                         loop
                         playsInline
-                        className="h-full w-full object-cover"
+                        webkit-playsinline="true"
+                        preload="metadata"
+                        disablePictureInPicture
+                        aria-hidden="true"
+                        className="pointer-events-none h-full w-full object-cover"
                       >
-                        <source src="/compressed/tattoovideo.mp4" type="video/mp4" />
+                        <source
+                          src="/compressed/joyeria1.mp4"
+                          type="video/mp4"
+                        />
                       </video>
 
-                      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,218,246,0.15),transparent_32%)]" />
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(22,18,16,0.78)] via-[rgba(22,18,16,0.24)] to-transparent p-5 md:p-6 xl:p-7">
-                        <p
-                          className="text-[11px] uppercase tracking-[0.2em] text-[#f5ecf6]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          Servicios de Arte
-                        </p>
+                      <div className="absolute inset-x-0 bottom-0 h-[5%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
+                    </div>
 
+                    <div className="mb-[-100px] flex h-[18%] flex-col justify-end p-5 xl:p-6">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Servicio destacado
+                      </p>
+
+                      <h4
+                        className="mt-1 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        {thirdArt?.title || "Joyería dental"}
+                      </h4>
+
+                      <p className="mt-3 text-sm leading-6 text-[#5f564d]">
+                        {thirdArt?.description ||
+                          "Detalles que aportan identidad y presencia."}
+                      </p>
+                    </div>
+                  </div>
+                </motion.article>
+
+                <motion.article
+                  initial={{ opacity: 0, x: -18, y: 28 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -18, y: 20 }}
+                  transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:h-full"
+                >
+                  <div className="flex h-full min-h-0 flex-col">
+                    <div className="relative h-[80%] overflow-hidden xl:h-[65%]">
+                      <img
+                        src={secondArt?.image || "/perforaciones.webp"}
+                        alt={secondArt?.title || "Servicio secundario"}
+                        loading="eager"
+                        decoding="async"
+                        className="h-full w-full object-cover"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[12%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,1)] to-transparent" />
+                    </div>
+
+                    <div className="flex-1 p-4 xl:p-4">
+                      <p
+                        className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                        style={{ fontFamily: "Cormorant Garamond, serif" }}
+                      >
+                        Arte corporal
+                      </p>
+
+                      <h4 className="mt-2 text-2xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
+                        {secondArt?.title || "Perforaciones"}
+                      </h4>
+                    </div>
+                  </div>
+                </motion.article>
+              </div>
+            </motion.div>
+          ) : (
+            <motion.div
+              key="scene-beauty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.45 }}
+              className="relative flex-1 xl:min-h-0"
+            >
+              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr] xl:pb-0">
+                <motion.article
+                  initial={{ opacity: 0, x: -30, y: 20 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: -28, y: 10 }}
+                  transition={{ duration: 0.6, delay: 0.08 }}
+                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-1 xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[80%] overflow-hidden md:h-[110%]">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        webkit-playsinline="true"
+                        preload="metadata"
+                        disablePictureInPicture
+                        aria-hidden="true"
+                        className="pointer-events-none h-full w-full object-cover"
+                      >
+                        <source src="/compressed/salud.mp4" type="video/mp4" />
+                      </video>
+
+                      <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
+                    </div>
+
+                    <div className="relative z-10 -mt-6 flex h-[28%] flex-col justify-start p-5 xl:-mt-28 xl:p-6">
+                      <div>
                         <h3
-                          className="mt-2 text-3xl font-semibold leading-[0.95] tracking-tight text-white md:text-5xl"
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
-                          {firstArt?.title || "Tatuajes"}
+                          Salud
                         </h3>
 
-                        <p className="mt-3 max-w-md text-sm leading-6 text-white/78 md:text-base">
-                          {firstArt?.description ||
-                            "Diseño, expresión y detalle en una propuesta artística cuidada de principio a fin."}
+                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                          Acné, manchas, rosácea, rejuvenecimiento.
                         </p>
                       </div>
                     </div>
-                  </motion.article>
+                  </div>
+                </motion.article>
 
-                  <motion.article
-                    initial={{ opacity: 0, x: 26, y: 12 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: 28, y: -6 }}
-                    transition={{ duration: 0.68, delay: 0.12 }}
-                    className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:row-span-2 xl:h-full backdrop-blur-xl"
-                  >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[80%] overflow-hidden">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="h-full w-full object-cover"
-                        >
-                          <source src="/compressed/joyeria1.mp4" type="video/mp4" />
-                        </video>
+                <motion.article
+                  initial={{ opacity: 0, x: 20, y: 16, scale: 0.97 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -20, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-2 xl:h-[460px]"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[70%] overflow-hidden md:h-[65%]">
+                      <img
+                        src="/meso.webp"
+                        alt="Mesoterapia"
+                        loading="eager"
+                        decoding="async"
+                        className="h-full w-full scale-110 object-cover object-[center_18%]"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
+                    </div>
 
-                        <div className="absolute inset-x-0 bottom-0 h-[5%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
-                      </div>
-
-                      <div className="flex mb-[-100px] h-[18%] flex-col justify-end p-5 xl:p-6">
-                        <p
-                          className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                    <div className="flex h-[10%] flex-col justify-between p-5 md:p-5 xl:p-5">
+                      <div>
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
-                          Servicio destacado
-                        </p>
+                          Mesoterapia
+                        </h3>
 
-                        <h4
-                          className="mt-1 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
+                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                          Lipopapada, Aumento de glúteos, Rinomodelación,
+                          Volumen de labios, Babyface
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.article>
+
+                <motion.article
+                  initial={{ opacity: 0, x: 28, y: 16, scale: 0.97 }}
+                  animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, x: -24, y: -8, scale: 0.98 }}
+                  transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
+                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-3 xl:h-[460px]"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[75%] overflow-hidden md:h-[65%]">
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        webkit-playsinline="true"
+                        preload="metadata"
+                        disablePictureInPicture
+                        aria-hidden="true"
+                        className="pointer-events-none h-full w-full scale-110 object-cover object-[center_58%]"
+                      >
+                        <source
+                          src="/compressed/cosmeto.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                      <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
+                    </div>
+
+                    <div className="flex h-[10%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                      <div>
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
-                          {thirdArt?.title || "Joyería dental"}
-                        </h4>
+                          Cosmetología
+                        </h3>
 
-                        <p className="mt-3 text-sm leading-6 text-[#5f564d]">
-                          {thirdArt?.description ||
-                            "Detalles que aportan identidad y presencia."}
+                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                          Peeling, Limpieza facial, Dermaplaning, Dermapen.
                         </p>
                       </div>
                     </div>
-                  </motion.article>
+                  </div>
+                </motion.article>
 
-                  <motion.article
-                    initial={{ opacity: 0, x: -18, y: 28 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: -18, y: 20 }}
-                    transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:h-full backdrop-blur-xl"
-                  >
-                    <div className="flex h-full min-h-0 flex-col">
-                      <div className="relative h-[80%] overflow-hidden xl:h-[65%]">
-                        <img
-                          src={secondArt?.image || "/perforaciones.webp"}
-                          alt={secondArt?.title || "Servicio secundario"}
-                          className="h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 h-[12%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,1)] to-transparent" />
-                      </div>
+                <motion.article
+                  initial={{ opacity: 0, x: 26, y: 18 }}
+                  animate={{ opacity: 1, x: 0, y: 0 }}
+                  exit={{ opacity: 0, x: 26, y: 16 }}
+                  transition={{ duration: 0.68, delay: 0.12 }}
+                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-4 xl:row-span-2 xl:h-full"
+                >
+                  <div className="flex h-full flex-col">
+                    <div className="relative h-[75%] overflow-hidden md:h-[88%]">
+                      <img
+                        src="/estetica.webp"
+                        alt="Estética"
+                        loading="eager"
+                        decoding="async"
+                        className="h-full w-full scale-100 object-cover object-[center_250%]"
+                      />
+                      <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
+                    </div>
 
-                      <div className="flex-1 p-4 xl:p-4">
-                        <p
-                          className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                    <div className="relative z-10 -mt-12 flex h-[20%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
+                      <div>
+                        <h3
+                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
-                          Arte corporal
+                          Estética
+                        </h3>
+
+                        <p className="mt-3 text-sm leading-6 text-[#5e5f4d]">
+                          Laminado y perfilado de cejas, Hydralips y BBlips.
                         </p>
-
-                        <h4 className="mt-2 text-2xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
-                          {secondArt?.title || "Perforaciones"}
-                        </h4>
                       </div>
                     </div>
-                  </motion.article>
-                </div>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="scene-beauty"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.45 }}
-                className="relative flex-1 xl:min-h-0"
-              >
-                <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr] xl:pb-0">
-                  <motion.article
-                    initial={{ opacity: 0, x: -30, y: 20 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: -28, y: 10 }}
-                    transition={{ duration: 0.6, delay: 0.08 }}
-                    className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-1 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
+                  </div>
+                </motion.article>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className="mt-6 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
+          <div className="flex w-full justify-center">
+            <div className="flex items-center gap-2 rounded-full border border-[#ece3d9]/90 bg-white/60 px-2 py-2 backdrop-blur-xl xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
+              {[0, 1].map((scene) => {
+                const isActive = activeScene === scene;
+
+                return (
+                  <button
+                    key={scene}
+                    type="button"
+                    onClick={() => {
+                      setActiveScene(scene);
+
+                      if (window.innerWidth < 1280) {
+                        requestAnimationFrame(() => {
+                          serviciosSectionRef.current?.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start",
+                          });
+                        });
+                      }
+                    }}
+                    aria-label={`Ir a escena ${scene + 1}`}
+                    className={`flex h-10 w-10 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
+                      isActive
+                        ? "border-[#c8a8bb] bg-[linear-gradient(180deg,#cdb1c0_0%,#b995aa_100%)] text-white shadow-[0_10px_24px_rgba(185,149,170,0.28)]"
+                        : "border-[#ece3d9] bg-white/70 text-[#8f8173] hover:bg-white"
+                    }`}
                   >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[80%] overflow-hidden md:h-[110%]">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="h-full w-full object-cover"
-                        >
-                          <source src="/compressed/salud.mp4" type="video/mp4" />
-                        </video>
-
-                        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
-                      </div>
-
-                      <div className="relative z-10 -mt-6 flex h-[28%] flex-col justify-start p-5 xl:-mt-28 xl:p-6">
-                        <div>
-                          
-
-                          <h3
-                            className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Salud
-                            
-                          </h3>
-
-                          <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Acné, manchas, rosácea, rejuvenecimiento.
-                          </p>
-                        </div>
-
-                        
-                      </div>
-                    </div>
-                  </motion.article>
-
-                  <motion.article
-                    initial={{ opacity: 0, x: 20, y: 16, scale: 0.97 }}
-                    animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: -20, y: -8, scale: 0.98 }}
-                    transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-2 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
-                  >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[70%] overflow-hidden md:h-[65%]">
-                        <img
-                          src="/meso.webp"
-                          alt="Mesoterapia"
-                          className="h-full w-full scale-110 object-cover object-[center_18%]"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
-                      </div>
-
-                      <div className="flex h-[10%] flex-col justify-between p-5 md:p-5 xl:p-5">
-                        <div>
-                         
-
-                          <h3
-                            className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                           Mesoterapia
-                          </h3>
-
-                          <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Lipopapada, Aumento de glúteos, Rinomodelación,
-                            Volumen de labios, Babyface
-                          </p>
-                        </div>
-
-                        
-                      </div>
-                    </div>
-                  </motion.article>
-
-                  <motion.article
-                    initial={{ opacity: 0, x: 28, y: 16, scale: 0.97 }}
-                    animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
-                    exit={{ opacity: 0, x: -24, y: -8, scale: 0.98 }}
-                    transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
-                    className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 xl:col-start-3 xl:col-span-1 xl:row-start-1 xl:h-[460px] backdrop-blur-xl"
-                  >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[75%] overflow-hidden md:h-[65%]">
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          className="h-full w-full scale-110 object-cover object-[center_58%]"
-                        >
-                          <source src="/compressed/cosmeto.mp4" type="video/mp4" />
-                        </video>
-                        <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
-                      </div>
-
-                      <div className="flex h-[10%] flex-col justify-between p-4 md:p-5 xl:p-5">
-                        <div>
-                          
-
-                          <h3
-                            className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Cosmetología
-                          </h3>
-
-                          <p className="mt-2 text-sm leading-5 text-[#5f564d]">
-                            Peeling, Limpieza facial, Dermaplaning, Dermapen.
-                          </p>
-                        </div>
-
-                      </div>
-                    </div>
-                  </motion.article>
-
-                  <motion.article
-                    initial={{ opacity: 0, x: 26, y: 18 }}
-                    animate={{ opacity: 1, x: 0, y: 0 }}
-                    exit={{ opacity: 0, x: 26, y: 16 }}
-                    transition={{ duration: 0.68, delay: 0.12 }}
-                    className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 xl:col-start-4 xl:row-start-1 xl:row-span-2 xl:h-full backdrop-blur-xl"
-                  >
-                    <div className="flex h-full flex-col">
-                      <div className="relative h-[75%] overflow-hidden md:h-[88%]">
-                        <img
-                          src="/estetica.webp"
-                          alt="Estética"
-                          className="h-full w-full scale-100 object-cover object-[center_250%]"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
-                      </div>
-
-                      <div className="relative z-10 -mt-12 flex h-[20%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
-                        <div>
-                          
-
-                          <h3
-                            className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
-                            style={{ fontFamily: "Cormorant Garamond, serif" }}
-                          >
-                            Estética
-                          </h3>
-
-                          <p className="mt-3 text-sm leading-6 text-[#5e5f4d]">
-                            Laminado y perfilado de cejas, Hydralips y BBlips.
-                          </p>
-                        </div>
-
-                     
-                      </div>
-                    </div>
-                  </motion.article>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <div className="mt-6 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
-  <div className="flex w-full justify-center">
-    <div className="flex items-center gap-2 rounded-full border border-[#ece3d9]/90 bg-white/60 px-2 py-2 backdrop-blur-xl xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
-      {[0, 1].map((scene) => {
-        const isActive = activeScene === scene;
-
-        return (
-          <button
-            key={scene}
-            type="button"
-            onClick={() => {
-              setActiveScene(scene);
-
-              if (window.innerWidth < 1280) {
-                requestAnimationFrame(() => {
-                  serviciosSectionRef.current?.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                });
-              }
-            }}
-            aria-label={`Ir a escena ${scene + 1}`}
-            className={`flex h-10 w-10 items-center justify-center rounded-full border text-[13px] font-medium transition-all duration-300 sm:h-11 sm:w-11 xl:h-12 xl:w-12 xl:text-sm ${
-              isActive
-                ? "border-[#c8a8bb] bg-[linear-gradient(180deg,#cdb1c0_0%,#b995aa_100%)] text-white shadow-[0_10px_24px_rgba(185,149,170,0.28)]"
-                : "border-[#ece3d9] bg-white/70 text-[#8f8173] hover:bg-white"
-            }`}
-          >
-            {scene + 1}
-          </button>
-        );
-      })}
-    </div>
-  </div>
-</div>
+                    {scene + 1}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-  );
+    </div>
+  </section>
+);
+  
 }
 
 export default function ShakeLandingPage() {
@@ -699,14 +718,17 @@ export default function ShakeLandingPage() {
           <section className="relative w-full">
             <div className="relative isolate min-h-screen overflow-hidden bg-[#151210]">
               <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="absolute inset-0 z-0 h-full w-full object-cover"
-              >
-                <source src="/compressed/fondoweb2.mp4" type="video/mp4" />
-              </video>
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  disablePictureInPicture
+                  poster=""
+                  className="absolute inset-0 z-0 h-full w-full object-cover"
+                >
+                  <source src="/compressed/fondoweb2.mp4" type="video/mp4" />
+                </video>
 
               <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(12,10,10,0.60)_0%,rgba(12,10,10,0.70)_22%,rgba(12,10,10,0.50)_58%,rgba(12,10,10,0.70)_100%)]" />
               <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_24%_24%,rgba(232,218,246,0.16),transparent_32%),radial-gradient(circle_at_78%_24%,rgba(244,223,233,0.14),transparent_30%)]" />
