@@ -108,7 +108,7 @@ function ServiciosSection({ artServices }) {
                     <div className="flex h-full flex-col">
                       <div className="relative h-[150%] overflow-hidden">
                         <img
-                          src="/remocion.png"
+                          src="/remocion.webp"
                           alt="Remoción de microtatuajes"
                           className="h-full w-full object-cover object-[center_65%]"
                         />
@@ -148,7 +148,7 @@ function ServiciosSection({ artServices }) {
                         playsInline
                         className="h-full w-full object-cover"
                       >
-                        <source src="/tattoovideo.mov" type="video/mp4" />
+                        <source src="/compressed/tattoovideo.mp4" type="video/mp4" />
                       </video>
 
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,218,246,0.15),transparent_32%)]" />
@@ -191,7 +191,7 @@ function ServiciosSection({ artServices }) {
                           playsInline
                           className="h-full w-full object-cover"
                         >
-                          <source src="/joyeria1.mov" type="video/mp4" />
+                          <source src="/compressed/joyeria1.mp4" type="video/mp4" />
                         </video>
 
                         <div className="absolute inset-x-0 bottom-0 h-[5%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
@@ -230,7 +230,7 @@ function ServiciosSection({ artServices }) {
                     <div className="flex h-full min-h-0 flex-col">
                       <div className="relative h-[80%] overflow-hidden xl:h-[65%]">
                         <img
-                          src={secondArt?.image || "/perforaciones.png"}
+                          src={secondArt?.image || "/perforaciones.webp"}
                           alt={secondArt?.title || "Servicio secundario"}
                           className="h-full w-full object-cover"
                         />
@@ -279,7 +279,7 @@ function ServiciosSection({ artServices }) {
                           playsInline
                           className="h-full w-full object-cover"
                         >
-                          <source src="/salud.mov" type="video/mp4" />
+                          <source src="/compressed/salud.mp4" type="video/mp4" />
                         </video>
 
                         <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
@@ -317,7 +317,7 @@ function ServiciosSection({ artServices }) {
                     <div className="flex h-full flex-col">
                       <div className="relative h-[70%] overflow-hidden md:h-[65%]">
                         <img
-                          src="/meso.JPEG"
+                          src="/meso.webp"
                           alt="Mesoterapia"
                           className="h-full w-full scale-110 object-cover object-[center_18%]"
                         />
@@ -362,7 +362,7 @@ function ServiciosSection({ artServices }) {
                           playsInline
                           className="h-full w-full scale-110 object-cover object-[center_58%]"
                         >
-                          <source src="/cosmeto.mov" type="video/mp4" />
+                          <source src="/compressed/cosmeto.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
                       </div>
@@ -397,7 +397,7 @@ function ServiciosSection({ artServices }) {
                     <div className="flex h-full flex-col">
                       <div className="relative h-[75%] overflow-hidden md:h-[88%]">
                         <img
-                          src="/estetica.JPG"
+                          src="/estetica.webp"
                           alt="Estética"
                           className="h-full w-full scale-100 object-cover object-[center_250%]"
                         />
@@ -491,27 +491,27 @@ export default function ShakeLandingPage() {
     {
       title: "Labios",
       subtitle: "Efecto full lips, Aqualips, Solo Contorno, Neutralización",
-      image: "/LABIOS1.JPG",
+      image: "/LABIOS1.webp",
     },
     {
       title: "Cejas",
       subtitle: "Efecto Microblanding, Powder Brows",
-      image: "/micropigmentaciondecejas.jpg",
+      image: "/micropigmentaciondecejas.webp",
     },
     {
       title: "Capilar",
       subtitle: "Diseño personalizado para cada Paciente",
-      image: "/capilar.png",
+      image: "/capilar.webp",
     },
     {
       title: "Pecas",
       subtitle: "Efecto Natural",
-      image: "/PECAS.png",
+      image: "/PECAS.webp",
     },
     {
       title: "Areolas",
       subtitle: "Reconstrucción personalizada",
-      image: "/areolas.png",
+      image: "/areolas.webp",
     },
   ];
 
@@ -519,22 +519,22 @@ export default function ShakeLandingPage() {
     {
       title: "Tatuajes",
       description: "Diseños personalizados y estilos adaptados a cada idea.",
-      image: "/tatuajes.avif",
+      image: "/tatuajes.webp",
     },
     {
       title: "Perforaciones",
       description: "Trabajo preciso, cuidado y asesoramiento estético.",
-      image: "/perforaciones.png",
+      image: "/perforaciones.webp",
     },
     {
       title: "Joyería dental",
       description: "Detalles que aportan identidad y presencia.",
-      image: "/joyeriadental.png",
+      image: "/joyeriadental.webp",
     },
     {
       title: "Remoción de microtatuajes",
       description: "Servicios orientados a corrección y renovación estética.",
-      image: "/remocion.png",
+      image: "/remocion.webp",
     },
   ];
 
@@ -555,13 +555,13 @@ export default function ShakeLandingPage() {
   ];
 
   const testimonialImages = [
-    { image: "/testimonio1.png", alt: "Testimonio 1 Casa Shake" },
-    { image: "/testimonio2.png", alt: "Testimonio 2 Casa Shake" },
-    { image: "/TESTRECORD.jpg", alt: "Testimonio 3 Casa Shake" },
-    { image: "/testimonio4.png", alt: "Testimonio 4 Casa Shake" },
-    { image: "/testimonio5.png", alt: "Testimonio 5 Casa Shake" },
-    { image: "/testimonio6.png", alt: "Testimonio 6 Casa Shake" },
-    { image: "/testimonio7.png", alt: "Testimonio 7 Casa Shake" },
+    { image: "/testimonio1.webp", alt: "Testimonio 1 Casa Shake" },
+    { image: "/testimonio2.webp", alt: "Testimonio 2 Casa Shake" },
+    { image: "/TESTRECORD.webp", alt: "Testimonio 3 Casa Shake" },
+    { image: "/testimonio4.webp", alt: "Testimonio 4 Casa Shake" },
+    { image: "/testimonio5.webp", alt: "Testimonio 5 Casa Shake" },
+    { image: "/testimonio6.webp", alt: "Testimonio 6 Casa Shake" },
+    { image: "/testimonio7.webp", alt: "Testimonio 7 Casa Shake" },
   ];
 
   const [figureStyle, setFigureStyle] = useState({
@@ -705,7 +705,7 @@ export default function ShakeLandingPage() {
                 playsInline
                 className="absolute inset-0 z-0 h-full w-full object-cover"
               >
-                <source src="/fondoweb2.mov" type="video/mp4" />
+                <source src="/compressed/fondoweb2.mp4" type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(12,10,10,0.60)_0%,rgba(12,10,10,0.70)_22%,rgba(12,10,10,0.50)_58%,rgba(12,10,10,0.70)_100%)]" />
@@ -724,7 +724,7 @@ export default function ShakeLandingPage() {
                   </div>
                 <div className="mx-auto relative flex w-full max-w-[1380px] items-center px-6 py-6 lg:px-8">
                   <img
-                    src="/logo-cs-blanco.png"
+                    src="/logo-cs-blanco.webp"
                     alt="Casa Shake"
                     className="h-9 w-auto md:h-10"
                   />
@@ -1116,7 +1116,7 @@ export default function ShakeLandingPage() {
 
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl">
                     <img
-                      src="/mision1.jpg"
+                      src="/mision1.webp"
                       alt="Misión Casa Shake"
                       className="h-[400px] w-full object-cover"
                     />
@@ -1175,7 +1175,7 @@ export default function ShakeLandingPage() {
 
                   <div className="overflow-hidden rounded-[1.6rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_40px_rgba(39,30,22,0.05)] backdrop-blur-xl">
                     <img
-                      src="/vision1.JPG"
+                      src="/vision1.webp"
                       alt="Visión Casa Shake"
                       className="h-[400px] w-full object-cover"
                     />
@@ -1245,7 +1245,7 @@ export default function ShakeLandingPage() {
 
   <div className="mt-[-3px] flex justify-center">
     <img
-      src="/logo-cs-negro.png"
+      src="/logo-cs-negro.webp"
       alt="Casa Shake"
       className="h-12 w-auto md:h-30"
     />
@@ -1443,7 +1443,7 @@ export default function ShakeLandingPage() {
             <div className="relative min-h-[760px] overflow-hidden md:min-h-[720px]">
               <div className="absolute inset-0">
                 <img
-                  src="/casashake.png"
+                  src="/casashake.webp"
                   alt="Cabina Casa Shake"
                   className="h-full w-full object-cover"
                 />
@@ -1473,7 +1473,7 @@ export default function ShakeLandingPage() {
                 </div>
 
                 <img
-                  src="/esposa.png"
+                  src="/esposa.webp"
                   alt="Profesional Casa Shake"
                   style={figureStyle}
                   className="absolute bottom-[190px] left-1/2 z-20 h-[630px] w-auto -translate-x-1/2 object-contain transition-transform duration-200 ease-out drop-shadow-[0_24px_40px_rgba(0,0,0,0.22)] md:bottom-0 md:h-[620px] lg:h-[860px]"
