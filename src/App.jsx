@@ -469,9 +469,8 @@ return (
                       if (window.innerWidth < 1280) {
                         requestAnimationFrame(() => {
                           serviciosSectionRef.current?.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start",
-                          });
+                            behavior: "auto",
+s                          });
                         });
                       }
                     }}
