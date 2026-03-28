@@ -33,6 +33,21 @@ function ServiciosSection({ artServices }) {
 
   const serviciosSectionRef = useRef(null);
 
+  useEffect(() => {
+  const videos = [
+    "/compressed/tattoovideo.mp4",
+    "/compressed/joyeria1.mp4",
+    "/compressed/salud.mp4",
+    "/compressed/cosmeto.mp4",
+  ];
+
+  videos.forEach((src) => {
+    const video = document.createElement("video");
+    video.src = src;
+    video.preload = "auto";
+  });
+}, []);
+
 return (
   <section
     ref={serviciosSectionRef}
@@ -150,7 +165,7 @@ return (
                       loop
                       playsInline
                       webkit-playsinline="true"
-                      preload="metadata"
+                      preload="auto"
                       disablePictureInPicture
                       aria-hidden="true"
                       className="pointer-events-none h-full w-full object-cover"
@@ -197,7 +212,7 @@ return (
                         loop
                         playsInline
                         webkit-playsinline="true"
-                        preload="metadata"
+                        preload="auto"
                         disablePictureInPicture
                         aria-hidden="true"
                         className="pointer-events-none h-full w-full object-cover"
@@ -291,7 +306,7 @@ return (
                         loop
                         playsInline
                         webkit-playsinline="true"
-                        preload="metadata"
+                        preload="auto"
                         disablePictureInPicture
                         aria-hidden="true"
                         className="pointer-events-none h-full w-full object-cover"
@@ -371,7 +386,7 @@ return (
                         loop
                         playsInline
                         webkit-playsinline="true"
-                        preload="metadata"
+                        preload="auto"
                         disablePictureInPicture
                         aria-hidden="true"
                         className="pointer-events-none h-full w-full scale-110 object-cover object-[center_58%]"
@@ -707,165 +722,147 @@ export default function ShakeLandingPage() {
         <main>
 
           <section className="relative w-full">
-            <div className="relative isolate min-h-screen overflow-hidden bg-[#151210]">
-              <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  preload="auto"
-                  disablePictureInPicture
-                  poster=""
-                  className="absolute inset-0 z-0 h-full w-full object-cover"
-                >
-                  <source src="/compressed/fondoweb2.mp4" type="video/mp4" />
-                </video>
+  <div className="relative isolate min-h-[92svh] overflow-hidden bg-[#151210] md:min-h-screen">
+    <video
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      disablePictureInPicture
+      className="absolute inset-0 z-0 h-full w-full object-cover"
+    >
+      <source src="/compressed/fondoweb2.mp4" type="video/mp4" />
+    </video>
 
-              <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(12,10,10,0.60)_0%,rgba(12,10,10,0.70)_22%,rgba(12,10,10,0.50)_58%,rgba(12,10,10,0.70)_100%)]" />
-              <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_24%_24%,rgba(232,218,246,0.16),transparent_32%),radial-gradient(circle_at_78%_24%,rgba(244,223,233,0.14),transparent_30%)]" />
-              <div className="pointer-events-none absolute inset-0 z-[4] opacity-[0.05] [background-image:radial-gradient(#ffffff_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[180px] bg-[linear-gradient(180deg,rgba(15,13,11,0)_0%,rgba(15,13,11,0.08)_28%,rgba(15,13,11,0.18)_55%,rgba(15,13,11,0.42)_78%,rgba(15,13,11,0.78)_100%)]" />
+    <div className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(10,8,8,0.78)_0%,rgba(10,8,8,0.72)_22%,rgba(10,8,8,0.56)_58%,rgba(10,8,8,0.82)_100%)] md:bg-[linear-gradient(180deg,rgba(12,10,10,0.60)_0%,rgba(12,10,10,0.70)_22%,rgba(12,10,10,0.50)_58%,rgba(12,10,10,0.70)_100%)]" />
+    <div className="absolute inset-0 z-[2] bg-[radial-gradient(circle_at_24%_24%,rgba(232,218,246,0.12),transparent_32%),radial-gradient(circle_at_78%_24%,rgba(244,223,233,0.10),transparent_30%)] md:bg-[radial-gradient(circle_at_24%_24%,rgba(232,218,246,0.16),transparent_32%),radial-gradient(circle_at_78%_24%,rgba(244,223,233,0.14),transparent_30%)]" />
+    <div className="pointer-events-none absolute inset-0 z-[4] opacity-[0.03] [background-image:radial-gradient(#ffffff_0.7px,transparent_0.7px)] [background-size:18px_18px]" />
+    <div className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[140px] bg-[linear-gradient(180deg,rgba(15,13,11,0)_0%,rgba(15,13,11,0.16)_38%,rgba(15,13,11,0.50)_72%,rgba(15,13,11,0.88)_100%)] md:h-[180px]" />
 
-              <div className="relative z-20 flex min-h-screen flex-col">
-                <div className="relative z-30 w-full border-b border-white/10">
-                    <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,235,199,0.20)_0%,rgba(245,223,170,0.70)_48%,rgba(243,214,145,0.0)_100%)] backdrop-blur-xl" />
-                    <div className="relative mx-auto flex w-full max-w-[1380px] items-center justify-center px-6 py-1 lg:px-6">
-                      <p className="text-center text-[8px] uppercase tracking-[0.18em] text-white/82 md:text-[10px]">
-                        · Edilfredo Ameghino 785, Belén de Escobar, Zona Norte ·
-                      </p>
-                    </div>
-                  </div>
-                <div className="mx-auto relative flex w-full max-w-[1380px] items-center px-6 py-6 lg:px-8">
-                  <img
-                    src="/logo-cs-blanco.webp"
-                    alt="Casa Shake"
-                    className="h-9 w-auto md:h-10"
-                  />
+    <div className="relative z-20 flex min-h-[100dvh] flex-col md:min-h-screen">
+      <div className="relative z-30 w-full border-b border-white/10">
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(248,235,199,0.14)_0%,rgba(245,223,170,0.40)_48%,rgba(243,214,145,0.0)_100%)] backdrop-blur-xl md:bg-[linear-gradient(90deg,rgba(248,235,199,0.20)_0%,rgba(245,223,170,0.70)_48%,rgba(243,214,145,0.0)_100%)]" />
+        <div className="relative mx-auto flex w-full max-w-[1380px] items-center justify-center px-4 py-1 md:px-6 lg:px-6">
+          <p className="text-center text-[7px] uppercase tracking-[0.16em] text-white/72 sm:text-[8px] md:text-[10px]">
+            · EDILFREDO AMEGHINO 785, BELÉN DE ESCOBAR ·
+          </p>
+        </div>
+      </div>
 
-                  <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[15px] text-white/72 md:flex">
-                    <a
-                      href="#producto-estrella"
-                      className="transition hover:text-white"
-                    >
-                      Producto estrella
-                    </a>
-                    <a
-                      href="#servicios"
-                      className="transition hover:text-white"
-                    >
-                      Servicios
-                    </a>
-                    <a href="#contacto" className="transition hover:text-white">
-                      Contacto
-                    </a>
-                  </nav>
-                </div>
+      <div className="relative mx-auto flex w-full max-w-[1380px] items-center px-5 py-5 sm:px-6 md:py-6 lg:px-8">
+        <img
+          src="/logo-cs-blanco.webp"
+          alt="Casa Shake"
+          className="h-8 w-auto md:h-10"
+        />
 
-                <div className="mx-auto flex w-full max-w-[1380px] flex-1 items-center px-6 pb-16 pt-8 lg:px-8">
-                  <div className="grid w-full items-end gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)]">
-                    <div className="max-w-[760px]">
-                      <p
-                        className="mb-6 text-[11px] uppercase tracking-[0.32em] text-white/62 md:text-xs"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Belleza, estética y arte
-                      </p>
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 text-[15px] text-white/72 md:flex">
+          <a href="#producto-estrella" className="transition hover:text-white">
+            Producto estrella
+          </a>
+          <a href="#servicios" className="transition hover:text-white">
+            Servicios
+          </a>
+          <a href="#contacto" className="transition hover:text-white">
+            Contacto
+          </a>
+        </nav>
+      </div>
 
-                      <h1
-                          className="max-w-[760px] text-[clamp(3rem,6vw,5.8rem)] font-semibold leading-[0.94] tracking-[-0.025em] text-[#f1e7ef]"
-                          style={{ fontFamily: "Cormorant Garamond, serif" }}
-                        >
-                          Te ayudamos a{" "}
-                          <span className="text-[#f0d660] italic">
-                            potenciar
-                          </span>
-                          <br />
-                          y{" "}
-                          <span className="text-[#f0d660] italic">
-                            cuidar
-                          </span>{" "}
-                          tu belleza.
-                        </h1>
+      <div className="mx-auto flex w-full max-w-[1380px] flex-1 items-center px-5 pb-10 pt-4 sm:px-6 sm:pb-12 md:px-6 md:pb-16 md:pt-8 lg:px-8">
+        <div className="grid w-full items-end gap-8 md:gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(320px,0.55fr)]">
+          <div className="max-w-[760px]">
+            <p
+              className="mb-4 text-[10px] uppercase tracking-[0.28em] text-white/58 md:mb-6 md:text-xs"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Belleza, estética y arte
+            </p>
 
-                      <p className="mt-8 max-w-[700px] text-[1.05rem] leading-8 text-white/76 md:text-[1rem]">
-                        Realzamos tu belleza y seguridad personal a través de
-                        servicios estéticos avanzados, tatuajes y joyería
-                        profesional. Te ofrecemos una experiencia completa donde
-                        transformás tu imagen y potenciás tu estilo en un solo
-                        lugar.
-                      </p>
-                    </div>
+            <h1
+              className="max-w-[11ch] text-[clamp(4.5rem,14vw,4.5rem)] font-semibold leading-[0.92] tracking-[-0.03em] text-[#f1e7ef] sm:max-w-[12ch] md:max-w-[760px] md:text-[clamp(3rem,6vw,5.8rem)]"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Te ayudamos
+              <br />
+              a <span className="text-[#f0d660] italic">potenciar</span>
+              <br />
+              y <span className="text-[#f0d660] italic">cuidar</span>
+              <br />
+              tu belleza.
+            </h1>
 
-                    <div className="flex w-full max-w-[420px] flex-col gap-4 sm:flex-row lg:justify-end">
-                      <a
-                        href={whatsappLink}
-                        target="_blank"
-                        rel="noreferrer"
-                        className={whatsappBtn}
-                        style={{ color: "#ffffff" }}
-                      >
-                        <span className="inline-block h-[1px] w-6 bg-white/70" />
-                        <span style={{ color: "#ffffff" }}>
-                          Consultar por WhatsApp
-                        </span>
-                      </a>
+            <p className="mt-5 max-w-[31rem] text-[15px] leading-7 text-white/78 sm:text-[16px] md:mt-8 md:max-w-[700px] md:text-[1rem] md:leading-8">
+              Realzamos tu belleza con servicios estéticos, tatuajes y joyería
+              profesional en una experiencia cuidada y personalizada.
+            </p>
+          </div>
 
-                      <a
-                        href="#producto-estrella"
-                        className={secondaryBtnDark}
-                        style={{ color: "#ffffff" }}
-                      >
-                        <span className="inline-block h-[1px] w-6 bg-white/70" />
-                        <span style={{ color: "#ffffff" }}>
-                          Explorar servicios
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+          <div className="flex w-full max-w-[420px] flex-col gap-3 sm:gap-4 lg:justify-end">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex min-h-[56px] w-full items-center justify-center gap-3 rounded-full border border-[#1faa52] bg-[#25D366] px-6 py-4 text-[15px] font-semibold text-white shadow-[0_18px_42px_rgba(37,211,102,0.28)] transition duration-300 hover:scale-[1.01] hover:bg-[#20bd5a] md:px-7"
+            >
+              <span className="inline-block h-[1px] w-5 bg-white/70" />
+              <span className="!text-white">Consultar por WhatsApp</span>
+            </a>
 
-                <div className="mx-auto hidden w-full max-w-[1380px] px-6 pb-8 lg:block lg:px-8">
-                  <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-5 text-white/74">
-                    <div>
-                      <p
-                        className="text-[11px] uppercase tracking-[0.22em] text-white/40"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Especialidad
-                      </p>
-                      <p className="mt-2 text-[15px]">
-                        Micropigmentación en todas sus variantes
-                      </p>
-                    </div>
+            <a
+              href="#producto-estrella"
+              className="inline-flex min-h-[54px] w-full items-center justify-center gap-3 rounded-full border border-white/18 bg-white/8 px-6 py-4 text-[15px] font-medium text-white/90 backdrop-blur-xl transition duration-300 hover:bg-white/12 md:px-7"
+            >
+              <span className="inline-block h-[1px] w-5 bg-white/60" />
+              <span className="!text-white">Explorar servicios</span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-                    <div>
-                      <p
-                        className="text-[11px] uppercase tracking-[0.22em] text-white/40"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Enfoque
-                      </p>
-                      <p className="mt-2 text-[15px]">
-                        Naturalidad, armonía y detalle
-                      </p>
-                    </div>
+      <div className="mx-auto hidden w-full max-w-[1380px] px-6 pb-8 lg:block lg:px-8">
+        <div className="grid grid-cols-3 gap-8 border-t border-white/10 pt-5 text-white/74">
+          <div>
+            <p
+              className="text-[11px] uppercase tracking-[0.22em] text-white/40"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Especialidad
+            </p>
+            <p className="mt-2 text-[15px]">
+              Micropigmentación en todas sus variantes
+            </p>
+          </div>
 
-                    <div className="text-right">
-                      <p
-                        className="text-[11px] uppercase tracking-[0.22em] text-white/40"
-                        style={{ fontFamily: "Cormorant Garamond, serif" }}
-                      >
-                        Contacto directo
-                      </p>
-                      <p className="mt-2 text-[15px]">
-                        Asesoramiento por WhatsApp
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+          <div>
+            <p
+              className="text-[11px] uppercase tracking-[0.22em] text-white/40"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Enfoque
+            </p>
+            <p className="mt-2 text-[15px]">
+              Naturalidad, armonía y detalle
+            </p>
+          </div>
+
+          <div className="text-right">
+            <p
+              className="text-[11px] uppercase tracking-[0.22em] text-white/40"
+              style={{ fontFamily: "Cormorant Garamond, serif" }}
+            >
+              Contacto directo
+            </p>
+            <p className="mt-2 text-[15px]">
+              Asesoramiento por WhatsApp
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
           <section
             id="producto-estrella"
