@@ -33,11 +33,11 @@ function ServiciosSection({ artServices }) {
 
   const serviciosSectionRef = useRef(null);
 
- return (
+return (
   <section
     ref={serviciosSectionRef}
     id="servicios"
-    className="relative w-full min-h-[100svh] overflow-visible px-4 py-6 sm:px-6 lg:px-8 xl:overflow-hidden xl:h-[100svh] xl:px-20 xl:py-6"
+    className="relative w-full min-h-[100svh] overflow-visible px-5 py-7 sm:px-6 lg:px-8 xl:h-[100svh] xl:overflow-hidden xl:px-20 xl:py-6"
   >
     <div className="pointer-events-none absolute inset-0">
       <div className="absolute inset-0 bg-[linear-gradient(180deg,#fbf9f6_0%,#f7f4ef_45%,#f6f1eb_100%)]" />
@@ -47,11 +47,11 @@ function ServiciosSection({ artServices }) {
       <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#7e7062_0.7px,transparent_0.7px)] [background-size:22px_22px]" />
     </div>
 
-    <div className="relative z-10 mx-auto flex min-h-full max-w-[1720px] flex-col xl:h-full xl:px-14">
-      <div className="mb-4 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
+    <div className="relative z-10 mx-auto flex min-h-full max-w-[1680px] flex-col xl:h-full xl:px-14">
+      <div className="mb-5 flex shrink-0 flex-col gap-4 md:flex-row md:items-end md:justify-between xl:mb-5">
         <div>
           <p
-            className="text-sm uppercase tracking-[0.22em] text-[#938476]"
+            className="text-[12px] uppercase tracking-[0.22em] text-[#938476]"
             style={{ fontFamily: "Cormorant Garamond, serif" }}
           >
             {currentScene.eyebrow}
@@ -64,7 +64,7 @@ function ServiciosSection({ artServices }) {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -18 }}
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-3 whitespace-pre-line text-4xl font-semibold leading-[1.02] tracking-tight text-[#201a15] md:text-5xl"
+              className="mt-3 max-w-[12ch] whitespace-pre-line text-[2.35rem] font-semibold leading-[0.98] tracking-tight text-[#201a15] sm:text-[2.7rem] md:max-w-none md:text-5xl"
               style={{ fontFamily: "Cormorant Garamond, serif" }}
             >
               {currentScene.title}
@@ -79,7 +79,7 @@ function ServiciosSection({ artServices }) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.55, delay: 0.05 }}
-            className="max-w-xl text-sm leading-6 text-[#5f564d] md:text-base md:leading-7"
+            className="max-w-[36rem] text-[14px] leading-6 text-[#5f564d] sm:text-[15px] md:text-base md:leading-7"
           >
             {currentScene.description}
           </motion.p>
@@ -97,16 +97,16 @@ function ServiciosSection({ artServices }) {
               transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
               className="relative flex-1 xl:min-h-0"
             >
-              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:pb-0">
+              <div className="grid gap-3.5 pb-14 sm:gap-4 sm:pb-16 xl:h-full xl:min-h-0 xl:grid-cols-[0.88fr_1.55fr_1.05fr] xl:grid-rows-[0.72fr_1fr] xl:gap-4 xl:pb-0">
                 <motion.article
                   initial={{ opacity: 0, x: -24, y: 18 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   exit={{ opacity: 0, x: -30, y: 8 }}
                   transition={{ duration: 0.6, delay: 0.08 }}
-                  className="overflow-hidden rounded-[1.9rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] backdrop-blur-xl"
+                  className="overflow-hidden rounded-[1.45rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] backdrop-blur-xl xl:rounded-[1.9rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[150%] overflow-hidden">
+                    <div className="relative h-[200px] overflow-hidden sm:h-[240px] xl:h-[150%]">
                       <img
                         src="/remocion.webp"
                         alt="Remoción de microtatuajes"
@@ -118,16 +118,16 @@ function ServiciosSection({ artServices }) {
                       <div className="absolute inset-x-0 bottom-0 h-[18%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.86)] to-transparent" />
                     </div>
 
-                    <div className="mb-4 flex h-[35%] flex-col justify-end p-5 xl:p-6">
+                    <div className="flex flex-col justify-end px-4 pb-4 pt-3 sm:p-5 xl:mb-4 xl:h-[35%] xl:p-6">
                       <p
-                        className="text-[11px] uppercase tracking-[0.2em] text-[#938476]"
+                        className="text-[10px] uppercase tracking-[0.2em] text-[#938476] sm:text-[11px]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Servicios de Corrección
                       </p>
 
                       <h4
-                        className="mt-3 whitespace-nowrap text-[1.4rem] font-semibold leading-none tracking-tight text-[#201a15] xl:text-[1.4rem]"
+                        className="mt-2 text-[1.08rem] font-semibold leading-none tracking-tight text-[#201a15] sm:text-[1.25rem] xl:mt-3 xl:whitespace-nowrap xl:text-[1.4rem]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Remoción de microtatuajes.
@@ -141,9 +141,9 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -30, y: -10, scale: 0.98 }}
                   transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative self-start overflow-hidden rounded-[2.2rem] border border-white/30 bg-white/10 shadow-[0_28px_72px_rgba(39,30,22,0.09)] min-h-0 h-[420px] backdrop-blur-md md:h-[520px] xl:row-span-2 xl:h-[62vh]"
+                  className="relative self-start overflow-hidden rounded-[1.55rem] border border-white/30 bg-white/10 shadow-[0_28px_72px_rgba(39,30,22,0.09)] h-[290px] min-h-0 backdrop-blur-md sm:h-[360px] md:h-[520px] xl:row-span-2 xl:h-[62vh] xl:rounded-[2.2rem]"
                 >
-                  <div className="relative h-full overflow-hidden rounded-[2.2rem]">
+                  <div className="relative h-full overflow-hidden rounded-[1.55rem] xl:rounded-[2.2rem]">
                     <video
                       autoPlay
                       muted
@@ -155,29 +155,26 @@ function ServiciosSection({ artServices }) {
                       aria-hidden="true"
                       className="pointer-events-none h-full w-full object-cover"
                     >
-                      <source
-                        src="/compressed/tattoovideo.mp4"
-                        type="video/mp4"
-                      />
+                      <source src="/compressed/tattoovideo.mp4" type="video/mp4" />
                     </video>
 
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(232,218,246,0.15),transparent_32%)]" />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(22,18,16,0.78)] via-[rgba(22,18,16,0.24)] to-transparent p-5 md:p-6 xl:p-7">
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(22,18,16,0.78)] via-[rgba(22,18,16,0.24)] to-transparent px-4 pb-4 pt-10 sm:p-5 md:p-6 xl:p-7">
                       <p
-                        className="text-[11px] uppercase tracking-[0.2em] text-[#f5ecf6]"
+                        className="text-[10px] uppercase tracking-[0.2em] text-[#f5ecf6] sm:text-[11px]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Servicios de Arte
                       </p>
 
                       <h3
-                        className="mt-2 text-3xl font-semibold leading-[0.95] tracking-tight text-white md:text-5xl"
+                        className="mt-2 text-[1.9rem] font-semibold leading-[0.95] tracking-tight text-white sm:text-[2.2rem] md:text-5xl"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         {firstArt?.title || "Tatuajes"}
                       </h3>
 
-                      <p className="mt-3 max-w-md text-sm leading-6 text-white/78 md:text-base">
+                      <p className="mt-2 max-w-md text-[14px] leading-6 text-white/78 sm:mt-3 md:text-base">
                         {firstArt?.description ||
                           "Diseño, expresión y detalle en una propuesta artística cuidada de principio a fin."}
                       </p>
@@ -190,10 +187,10 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   exit={{ opacity: 0, x: 28, y: -6 }}
                   transition={{ duration: 0.68, delay: 0.12 }}
-                  className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:row-span-2 xl:h-full"
+                  className="overflow-hidden rounded-[1.45rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:row-span-2 xl:h-full xl:rounded-[1.8rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[80%] overflow-hidden">
+                    <div className="relative h-[215px] overflow-hidden sm:h-[255px] xl:h-[80%]">
                       <video
                         autoPlay
                         muted
@@ -205,31 +202,28 @@ function ServiciosSection({ artServices }) {
                         aria-hidden="true"
                         className="pointer-events-none h-full w-full object-cover"
                       >
-                        <source
-                          src="/compressed/joyeria1.mp4"
-                          type="video/mp4"
-                        />
+                        <source src="/compressed/joyeria1.mp4" type="video/mp4" />
                       </video>
 
                       <div className="absolute inset-x-0 bottom-0 h-[5%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,0.92)] to-transparent" />
                     </div>
 
-                    <div className="mb-[-100px] flex h-[18%] flex-col justify-end p-5 xl:p-6">
+                    <div className="flex flex-col justify-end px-4 pb-4 pt-3 sm:p-5 xl:mb-[-100px] xl:h-[18%] xl:p-6">
                       <p
-                        className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                        className="text-[10px] uppercase tracking-[0.18em] text-[#938476] sm:text-[11px]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Servicio destacado
                       </p>
 
                       <h4
-                        className="mt-1 text-[2rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] xl:text-[2.35rem]"
+                        className="mt-1 text-[1.45rem] font-semibold leading-[0.92] tracking-tight text-[#201a15] sm:text-[1.75rem] xl:text-[2.35rem]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         {thirdArt?.title || "Joyería dental"}
                       </h4>
 
-                      <p className="mt-3 text-sm leading-6 text-[#5f564d]">
+                      <p className="mt-2 text-[14px] leading-6 text-[#5f564d] sm:mt-3 sm:text-sm">
                         {thirdArt?.description ||
                           "Detalles que aportan identidad y presencia."}
                       </p>
@@ -242,10 +236,10 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   exit={{ opacity: 0, x: -18, y: 20 }}
                   transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden rounded-[1.8rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:h-full"
+                  className="overflow-hidden rounded-[1.45rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:h-full xl:rounded-[1.8rem]"
                 >
                   <div className="flex h-full min-h-0 flex-col">
-                    <div className="relative h-[80%] overflow-hidden xl:h-[65%]">
+                    <div className="relative h-[200px] overflow-hidden sm:h-[235px] xl:h-[65%]">
                       <img
                         src={secondArt?.image || "/perforaciones.webp"}
                         alt={secondArt?.title || "Servicio secundario"}
@@ -256,15 +250,15 @@ function ServiciosSection({ artServices }) {
                       <div className="absolute inset-x-0 bottom-0 h-[12%] bg-gradient-to-t from-[#fffaf6] via-[rgba(255,250,246,1)] to-transparent" />
                     </div>
 
-                    <div className="flex-1 p-4 xl:p-4">
+                    <div className="flex-1 px-4 pb-4 pt-3 xl:p-4">
                       <p
-                        className="text-[11px] uppercase tracking-[0.18em] text-[#938476]"
+                        className="text-[10px] uppercase tracking-[0.18em] text-[#938476] sm:text-[11px]"
                         style={{ fontFamily: "Cormorant Garamond, serif" }}
                       >
                         Arte corporal
                       </p>
 
-                      <h4 className="mt-2 text-2xl font-semibold leading-[0.96] tracking-tight text-[#201a15]">
+                      <h4 className="mt-2 text-[1.35rem] font-semibold leading-[0.96] tracking-tight text-[#201a15] sm:text-[1.7rem] xl:text-2xl">
                         {secondArt?.title || "Perforaciones"}
                       </h4>
                     </div>
@@ -281,16 +275,16 @@ function ServiciosSection({ artServices }) {
               transition={{ duration: 0.45 }}
               className="relative flex-1 xl:min-h-0"
             >
-              <div className="grid gap-4 pb-20 xl:h-full xl:min-h-0 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr] xl:pb-0">
+              <div className="grid gap-3.5 pb-14 sm:gap-4 sm:pb-16 xl:h-full xl:min-h-0 xl:grid-cols-[0.86fr_1fr_1fr_0.9fr] xl:grid-rows-[1fr_1fr] xl:gap-4 xl:pb-0">
                 <motion.article
                   initial={{ opacity: 0, x: -30, y: 20 }}
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   exit={{ opacity: 0, x: -28, y: 10 }}
                   transition={{ duration: 0.6, delay: 0.08 }}
-                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-1 xl:row-span-2 xl:h-full"
+                  className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-1 xl:row-span-2 xl:h-full xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[80%] overflow-hidden md:h-[110%]">
+                    <div className="relative h-[245px] overflow-hidden sm:h-[300px] md:h-[110%] xl:h-[80%]">
                       <video
                         autoPlay
                         muted
@@ -308,16 +302,16 @@ function ServiciosSection({ artServices }) {
                       <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,0.9)] to-transparent" />
                     </div>
 
-                    <div className="relative z-10 -mt-6 flex h-[28%] flex-col justify-start p-5 xl:-mt-28 xl:p-6">
+                    <div className="relative z-10 flex flex-col justify-start px-4 pb-4 pt-3 sm:p-5 xl:-mt-28 xl:h-[28%] xl:p-6">
                       <div>
                         <h3
-                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
+                          className="mt-1 text-[1.55rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] sm:text-[1.9rem] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           Salud
                         </h3>
 
-                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                        <p className="mt-2 text-[14px] leading-5 text-[#5f564d] sm:text-sm">
                           Acné, manchas, rosácea, rejuvenecimiento.
                         </p>
                       </div>
@@ -330,10 +324,10 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -20, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-2 xl:h-[460px]"
+                  className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-2 xl:h-[460px] xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[70%] overflow-hidden md:h-[65%]">
+                    <div className="relative h-[200px] overflow-hidden sm:h-[230px] md:h-[65%] xl:h-[70%]">
                       <img
                         src="/meso.webp"
                         alt="Mesoterapia"
@@ -344,16 +338,16 @@ function ServiciosSection({ artServices }) {
                       <div className="absolute inset-x-0 bottom-0 h-[30%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
                     </div>
 
-                    <div className="flex h-[10%] flex-col justify-between p-5 md:p-5 xl:p-5">
+                    <div className="flex flex-col justify-between px-4 pb-4 pt-3 sm:p-5 xl:h-[10%]">
                       <div>
                         <h3
-                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
+                          className="mt-1 text-[1.5rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] sm:text-[1.85rem] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           Mesoterapia
                         </h3>
 
-                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                        <p className="mt-2 text-[14px] leading-5 text-[#5f564d] sm:text-sm">
                           Lipopapada, Aumento de glúteos, Rinomodelación,
                           Volumen de labios, Babyface
                         </p>
@@ -367,10 +361,10 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -24, y: -8, scale: 0.98 }}
                   transition={{ duration: 0.78, ease: [0.22, 1, 0.36, 1] }}
-                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-3 xl:h-[460px]"
+                  className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_22px_60px_rgba(39,30,22,0.07)] min-h-0 backdrop-blur-xl xl:col-start-3 xl:h-[460px] xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[75%] overflow-hidden md:h-[65%]">
+                    <div className="relative h-[220px] overflow-hidden sm:h-[245px] md:h-[65%] xl:h-[75%]">
                       <video
                         autoPlay
                         muted
@@ -382,24 +376,21 @@ function ServiciosSection({ artServices }) {
                         aria-hidden="true"
                         className="pointer-events-none h-full w-full scale-110 object-cover object-[center_58%]"
                       >
-                        <source
-                          src="/compressed/cosmeto.mp4"
-                          type="video/mp4"
-                        />
+                        <source src="/compressed/cosmeto.mp4" type="video/mp4" />
                       </video>
                       <div className="absolute inset-x-0 bottom-0 h-[20%] bg-gradient-to-t from-[rgba(255,250,246,1)] to-transparent" />
                     </div>
 
-                    <div className="flex h-[10%] flex-col justify-between p-4 md:p-5 xl:p-5">
+                    <div className="flex flex-col justify-between px-4 pb-4 pt-3 sm:p-5 xl:h-[10%]">
                       <div>
                         <h3
-                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15]"
+                          className="mt-1 text-[1.5rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] sm:text-[1.85rem] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           Cosmetología
                         </h3>
 
-                        <p className="mt-2 text-sm leading-5 text-[#5f564d]">
+                        <p className="mt-2 text-[14px] leading-5 text-[#5f564d] sm:text-sm">
                           Peeling, Limpieza facial, Dermaplaning, Dermapen.
                         </p>
                       </div>
@@ -412,10 +403,10 @@ function ServiciosSection({ artServices }) {
                   animate={{ opacity: 1, x: 0, y: 0 }}
                   exit={{ opacity: 0, x: 26, y: 16 }}
                   transition={{ duration: 0.68, delay: 0.12 }}
-                  className="overflow-hidden rounded-[1.3rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-4 xl:row-span-2 xl:h-full"
+                  className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-4 xl:row-span-2 xl:h-full xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[75%] overflow-hidden md:h-[88%]">
+                    <div className="relative h-[200px] overflow-hidden sm:h-[230px] md:h-[88%] xl:h-[75%]">
                       <img
                         src="/estetica.webp"
                         alt="Estética"
@@ -426,16 +417,16 @@ function ServiciosSection({ artServices }) {
                       <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
                     </div>
 
-                    <div className="relative z-10 -mt-12 flex h-[20%] flex-col justify-between p-5 xl:-mt-20 xl:p-6">
+                    <div className="relative z-10 flex flex-col justify-between px-4 pb-4 pt-3 sm:p-5 xl:-mt-20 xl:h-[20%] xl:p-6">
                       <div>
                         <h3
-                          className="mt-2 text-[2rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] xl:text-[2rem]"
+                          className="mt-1 text-[1.5rem] font-semibold leading-[0.95] tracking-tight text-[#201a15] sm:text-[1.85rem] xl:text-[2rem]"
                           style={{ fontFamily: "Cormorant Garamond, serif" }}
                         >
                           Estética
                         </h3>
 
-                        <p className="mt-3 text-sm leading-6 text-[#5e5f4d]">
+                        <p className="mt-3 text-[14px] leading-6 text-[#5e5f4d] sm:text-sm">
                           Laminado y perfilado de cejas, Hydralips y BBlips.
                         </p>
                       </div>
@@ -447,7 +438,7 @@ function ServiciosSection({ artServices }) {
           )}
         </AnimatePresence>
 
-        <div className="mt-6 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
+        <div className="mt-5 flex justify-center xl:pointer-events-none xl:absolute xl:inset-x-0 xl:bottom-[0.3rem] xl:z-30 xl:mt-0">
           <div className="flex w-full justify-center">
             <div className="flex items-center gap-2 rounded-full border border-[#ece3d9]/90 bg-white/60 px-2 py-2 backdrop-blur-xl xl:pointer-events-auto sm:gap-3 sm:px-3 sm:py-3">
               {[0, 1].map((scene) => {
