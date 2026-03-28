@@ -284,7 +284,7 @@ return (
                   className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-1 xl:row-span-2 xl:h-full xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[245px] overflow-hidden sm:h-[300px] md:h-[110%] xl:h-[80%]">
+                    <div className="relative h-[245px] overflow-hidden sm:h-[300px] md:h-[110%] xl:h-[110%]">
                       <video
                         autoPlay
                         muted
