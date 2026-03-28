@@ -406,13 +406,13 @@ return (
                   className="overflow-hidden rounded-[1.1rem] border border-[#ece3d9] bg-[linear-gradient(180deg,rgba(255,255,255,0.84)_0%,rgba(255,252,248,0.78)_100%)] shadow-[0_18px_46px_rgba(39,30,22,0.06)] min-h-0 backdrop-blur-xl xl:col-start-4 xl:row-span-2 xl:h-full xl:rounded-[1.3rem]"
                 >
                   <div className="flex h-full flex-col">
-                    <div className="relative h-[200px] overflow-hidden sm:h-[230px] md:h-[88%] xl:h-[75%]">
+                    <div className="relative h-[300px] overflow-hidden sm:h-[230px] md:h-[88%] xl:h-[87%]">
                       <img
                         src="/estetica.webp"
                         alt="Estética"
                         loading="eager"
                         decoding="async"
-                        className="h-full w-full scale-100 object-cover object-[center_250%]"
+                        className="h-full w-full object-cover object-bottom xl:object-[center_250%]"
                       />
                       <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-[rgba(255,250,246,1)] via-[rgba(255,250,246,1)] to-transparent" />
                     </div>
